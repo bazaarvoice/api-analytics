@@ -8717,12 +8717,14 @@
 }
 }
 
-.customer-review-body .ellipsis-read-more {
+.customer-review-body .ellipsis-read-more,
+.customer-review-body .ellipsis-read-less {
     border-top:1px solid;
     text-align:center
 }
 
-.customer-review-body .ellipsis-read-more a {
+.customer-review-body .ellipsis-read-more a,
+.customer-review-body .ellipsis-read-less a {
     display:inline-block;
     padding-right:19px;
     cursor:pointer;
@@ -8730,16 +8732,25 @@
     font-weight:700
 }
 
-.customer-review-body .ellipsis-read-more a:after {
+.customer-review-body .ellipsis-read-more a:after,
+.customer-review-body .ellipsis-read-less a:after{
     position:relative;
-    top:10px;
+    /*top:10px;*/
     left:4px;
     width:0;
     height:0;
-    border-color:#007dc6 transparent transparent;
+    /*border-color:#007dc6 transparent transparent;*/
     border-style:solid;
     border-width:4px;
     content:""
+}
+.customer-review-body .ellipsis-read-more a:after{
+    top:10px;
+    border-color:#007dc6 transparent transparent;
+}
+.customer-review-body .ellipsis-read-less a:after {
+    top:-8px;
+    border-color:transparent transparent #007dc6 transparent;
 }
 
 .customer-review-body .ellipsis-read-more a.on:after {
