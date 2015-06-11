@@ -49,7 +49,11 @@ $( document ).ready(function() {
 
         sortClick($(this));
     });
-    
+    //sort by sub filter
+    $(" .chooser-option.js-chooser-option").click(function(){
+        subSortClick($(this));
+    });
+
     // write a review
     $( "#WMItemWriteReviewLnk" ).click(function() {
         writeReviewClick($(this));
@@ -65,7 +69,7 @@ $( document ).ready(function() {
         });
 
     // read more
-    $( ".ellipsis-read-more a" ).click(function() {
+    $( ".js-ellipsis-read-more.ellipsis-read-more a" ).click(function() {
         // start some css trickery
         $('.ellipsis-content.module').css("max-height", "360px");
         $( ".ellipsis-read-more a" ).text('Read Less');
@@ -73,6 +77,10 @@ $( document ).ready(function() {
         $( ".js-ellipsis-read-more" ).addClass('ellipsis-read-less');
         // end css trickery
         readMoreClick($(this));
+    });
+    // read less
+    $( ".js-ellipsis-read-more.ellipsis-read-less a" ).click(function() {
+        readLessClick($(this));
     });
     // report
     $( ".customer-review-report-btn" ).click(function() {
@@ -93,23 +101,24 @@ $( document ).ready(function() {
 });
 function sortClick(item){
     console.log('sort');
-    //need to handle the Read Less click too. ??
+}
+function subSortClick(item){
+    console.log('subSort');
 }
 function helpfulNoClick(item){
     console.log('Helpful - no');
-    //need to handle the Read Less click too. ??
 }
 function helpfulYesClick(item){
     console.log('Helpful - yes');
-    //need to handle the Read Less click too. ??
 }
 function writeReviewClick(item){
     console.log('write Review');
-    //need to handle the Read Less click too. ??
 }
 function readMoreClick(item){
     console.log('read More');
-    //need to handle the Read Less click too. ??
+}
+function readLessClick(item){
+    console.log('read Less');
 }
 function reportClick(item){
     console.log('report');
