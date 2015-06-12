@@ -52,6 +52,9 @@ $( document ).ready(function() {
     //sort by sub filter
     $(" .chooser-option.js-chooser-option").click(function(){
         subSortClick($(this));
+        //undo all the CSS
+        $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
+        $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
     });
 
     // write a review
@@ -70,6 +73,7 @@ $( document ).ready(function() {
 
     // read more
     $( ".js-ellipsis-read-more.ellipsis-read-more a" ).click(function() {
+        debugger;
         // start some css trickery
         $('.ellipsis-content.module').css("max-height", "360px");
         $( ".ellipsis-read-more a" ).text('Read Less');
@@ -77,9 +81,11 @@ $( document ).ready(function() {
         $( ".js-ellipsis-read-more" ).addClass('ellipsis-read-less');
         // end css trickery
         readMoreClick($(this));
+    
     });
     // read less
     $( ".js-ellipsis-read-more.ellipsis-read-less a" ).click(function() {
+        debugger
         readLessClick($(this));
     });
     // report

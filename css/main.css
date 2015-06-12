@@ -322,6 +322,24 @@ table {
 }
 
 @font-face {
+    font-family:IcoMoonIcons;
+    src:url(fonts/icomoon.eot);
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face {
+    font-family:IcoMoonIcons;
+    src:url(../fonts/icomoon.woff) format("woff2"),
+        url(../fonts/icomoon.woff) format("woff"),
+        url(../fonts/icomoon.ttf) format("truetype");
+    font-weight:400;
+    font-style:normal
+}
+
+
+/*
+@font-face {
     font-family:WalmartIcons;
     src:url(//i5.walmartimages.com/dfw/63fd9f59-6924/k2-_68851acd-2d09-4b76-ac5a-c7d95dc80eb9.v1.eot);
     font-weight:400;
@@ -334,9 +352,9 @@ table {
     font-weight:400;
     font-style:normal
 }
-
+*/
 .wmicon {
-    font-family:WalmartIcons;
+    font-family:IcoMoonIcons;
     font-style:normal;
     font-weight:400;
     text-align:center;
@@ -541,7 +559,7 @@ table {
 }
 
 .wmicon-user:before {
-    content:"\e045"
+    content:"\e976"
 }
 
 .wmicon-thumbs-up:before {
@@ -569,7 +587,9 @@ table {
 }
 
 .wmicon-flag:before {
-    content:"\e052"
+    /*changed to icoMoon*/
+    content:"\e604";
+    font-family: "IcoMoonIcons"
 }
 
 .wmicon-modal:before {
@@ -630,6 +650,12 @@ table {
 
 .wmicon-onesie:before {
     content:"\e067"
+}
+.wmicon-onesie:before {
+    content:"\e067"
+}
+.icon-user-check:before {
+    content: "\e975";
 }
 
 @-webkit-keyframes spin-clockwise {
@@ -6004,7 +6030,7 @@ td,th {
 }
 
 .btn-vote-up:before,.btn-vote-down:before {
-    font-family:WalmartIcons;
+    font-family:IcoMoonIcons;
     font-style:normal;
     font-weight:400;
     text-align:center;
@@ -6017,7 +6043,7 @@ td,th {
 }
 
 .btn-vote-up:before {
-    content:"\e050"
+    content:"\f087"
 }
 
 .btn-vote-down {
@@ -6026,7 +6052,7 @@ td,th {
 }
 
 .btn-vote-down:before {
-    content:"\e051"
+    content:"\f088"
 }
 
 .btn-vote-group .btn-vote {

@@ -167,10 +167,10 @@
     width:50px;
     height:50px;
     padding:10px 14px;
-    border:1px solid #007dc6;
+    border:1px solid #C67100;
     border-radius:50px;
     background:#fff;
-    color:#007dc6
+    color:#C67100
 }
 
 .hero-carousel-zoom-container .hero-carousel-zoom-container-inner {
@@ -343,7 +343,7 @@
 }
 
 .product-price {
-    color:#007dc6
+    color:#C67100
 }
 
 .product-price .price-display {
@@ -400,7 +400,7 @@
 }
 
 .price-soi-store-name {
-    color:#007dc6
+    color:#C67100
 }
 
 .price-oos,.price-retired,.price-soi {
@@ -470,7 +470,7 @@
     margin:3px 0;
     padding-left:10px;
     border-left:1px solid #dfebed;
-    color:#007dc6;
+    color:#C67100;
     font-weight:700;
     line-height:1
 }
@@ -479,7 +479,7 @@
     position:relative;
     float:left;
     margin-right:23px;
-    color:#007dc6
+    color:#C67100
 }
 
 .price-details .price-details-savings {
@@ -687,7 +687,7 @@
 
 .seller-panel-closed {
     padding-top:10px;
-    color:#007dc6;
+    color:#C67100;
     text-align:center
 }
 
@@ -771,7 +771,7 @@
 }
 
 .marketplace-sellers .wmicon-help {
-    color:#007dc6;
+    color:#C67100;
     margin-left:5px
 }
 
@@ -907,11 +907,11 @@
     border:1px solid #c2cfd6;
     border-left:0;
     border-right:0;
-    color:#007dc6
+    color:#C67100
 }
 
 .mp-panel-trigger .mp-seller-count-label {
-    color:#007dc6;
+    color:#C67100;
     font-size:18px
 }
 
@@ -1042,7 +1042,7 @@
 }
 
 .product-care-plans-container .wmicon-help {
-    color:#007dc6;
+    color:#C67100;
     font-size:12px
 }
 
@@ -1077,7 +1077,7 @@
 }
 
 .slide-panel-container .slide-panel-content .heading-a {
-    color:#007dc6;
+    color:#C67100;
     margin-top:0;
     font-size:18px;
     color:#222;
@@ -1406,7 +1406,7 @@
 .product-fulfillment-btn .wmicon {
     float:left;
     margin:0 10px 2px 0;
-    color:#007dc6
+    color:#C67100
 }
 
 .product-fulfillment-btn span {
@@ -1424,7 +1424,7 @@
 }
 
 .product-fulfillment-btn .delivery-date-msg {
-    color:#007dc6
+    color:#C67100
 }
 
 .product-fulfillment-btn .delivery-date-msg:after {
@@ -1435,12 +1435,12 @@
     height:0;
     margin-left:5px;
     border:4px solid transparent;
-    border-top-color:#007dc6;
+    border-top-color:#C67100;
     vertical-align:middle
 }
 
 .product-fulfillment-btn .product-fulfillment-btn-heading {
-    color:#007dc6
+    color:#C67100
 }
 
 .product-fulfillment-btn.active .delivery-date-msg {
@@ -1518,7 +1518,7 @@
 
 .product-fulfillment-per-item {
     padding-left:5px;
-    color:#007dc6;
+    color:#C67100;
     vertical-align:text-top
 }
 
@@ -1651,7 +1651,7 @@
     padding:0;
     border:0;
     background:0 0;
-    color:#007dc6;
+    color:#C67100;
     font-size:11px;
     font-weight:600;
     outline:0
@@ -1711,7 +1711,7 @@
     padding:0;
     border:0;
     background:0 0;
-    color:#007dc6;
+    color:#C67100;
     outline:0;
     line-height:1.2
 }
@@ -2017,7 +2017,7 @@
 }
 
 .product-social-media a:hover,.product-social-media a:focus {
-    color:#007dc6
+    color:#C67100
 }
 
 .product-social-media i {
@@ -2031,7 +2031,7 @@
 
 .product-specs-section .show-more {
     padding:5px 0 0;
-    color:#007dc6;
+    color:#C67100;
     cursor:pointer;
     font-size:12px;
     font-weight:700;
@@ -2052,7 +2052,7 @@
     height:0;
     margin-top:8px;
     margin-left:5px;
-    border-color:#007dc6 transparent transparent;
+    border-color:#C67100 transparent transparent;
     border-style:solid;
     border-width:5px 4px;
     content:""
@@ -2068,7 +2068,7 @@
 
 .product-specs-section .expanded .show-more span:before {
     margin-top:3px;
-    border-color:transparent transparent #007dc6
+    border-color:transparent transparent #C67100
 }
 
 .product-specs-section .table td:first-child {
@@ -2787,7 +2787,7 @@
 }
 
 .idml-video-container .video-link {
-    color:#007dc6;
+    color:#C67100;
     font-size:16px
 }
 
@@ -2833,7 +2833,7 @@
 }
 
 .sellerSubMap .submap-price {
-    color:#007dc6;
+    color:#C67100;
     font-size:16px;
     font-weight:600;
     vertical-align:middle
@@ -2938,7 +2938,7 @@
     width:42px;
     height:40px;
     margin-top:126px;
-    color:#007dc6;
+    color:#C67100;
     font-size:40px;
     font-weight:700;
     line-height:40px;
@@ -3072,7 +3072,7 @@
 }
 
 .btv-content-fulfillment-message {
-    color:#007dc6;
+    color:#C67100;
     font-size:12px;
     line-height:1
 }
@@ -3139,7 +3139,7 @@
 }
 
 .age-grade {
-    color:#007dc6
+    color:#C67100
 }
 
 .btv-accessory-variants .variant-label {
@@ -3232,7 +3232,7 @@
 }
 
 .product-about .ellipsis-read-more {
-    border-top:1px solid #007dc6;
+    border-top:1px solid #C67100;
     text-align:center
 }
 
@@ -3250,7 +3250,7 @@
     left:4px;
     width:0;
     height:0;
-    border-color:#007dc6 transparent transparent;
+    border-color:#C67100 transparent transparent;
     border-style:solid;
     border-width:4px;
     content:""
@@ -3259,7 +3259,7 @@
 .product-about .ellipsis-read-more a.on:after {
     top:-10px;
     border-top-color:transparent;
-    border-bottom-color:#007dc6
+    border-bottom-color:#C67100
 }
 
 .product-cross-promotion-section {
@@ -3511,7 +3511,7 @@
 }
 
 .choice-hero-heading {
-    color:#007dc6;
+    color:#C67100;
     font-size:14px;
     font-weight:400
 }
@@ -3524,9 +3524,9 @@
     display:block;
     width:100px;
     margin:auto;
-    border:solid 2px #007dc6;
+    border:solid 2px #C67100;
     border-radius:3px 3px 0 0;
-    background-color:#007dc6;
+    background-color:#C67100;
     color:#fff;
     font-size:12px;
     font-weight:300;
@@ -3539,12 +3539,12 @@
     width:100px;
     height:100px;
     margin:0 auto;
-    border:solid 1px #007dc6
+    border:solid 1px #C67100
 }
 
 .choice-hero-imagery-plus-sign {
     display:inline-block;
-    color:#007dc6;
+    color:#C67100;
     font-size:38px;
     font-weight:700;
     vertical-align:middle
@@ -3962,7 +3962,7 @@
     font-weight:400;
     text-align:center;
     content:"\e037";
-    color:#007dc6;
+    color:#C67100;
     font-size:13px
 }
 
@@ -4460,7 +4460,7 @@
 }
 
 .choice-additional-pricing {
-    background-color:#007dc6;
+    background-color:#C67100;
     color:#fff;
     font-size:12px;
     font-weight:500
@@ -4489,7 +4489,7 @@
     bottom:0;
     display:block;
     width:100%;
-    background:#007dc6;
+    background:#C67100;
     color:#fff;
     font-size:12px;
     font-weight:600;
@@ -4634,7 +4634,7 @@
     top:1px;
     vertical-align:middle;
     border:4px solid transparent;
-    border-top-color:#007dc6;
+    border-top-color:#C67100;
     display:inline-block;
     height:0;
     margin:0 0 0 4px;
@@ -4680,7 +4680,7 @@
 
 .choice-fixed-bot .shipping-message {
     margin-top:2px;
-    color:#007dc6;
+    color:#C67100;
     font-size:12px;
     font-weight:600;
     line-height:1
@@ -4908,7 +4908,7 @@
     clear:both;
     display:block;
     padding:15px 0 0;
-    color:#007dc6;
+    color:#C67100;
     font-weight:900
 }
 
@@ -5014,7 +5014,7 @@
     top:1px;
     vertical-align:middle;
     border:4px solid transparent;
-    border-top-color:#007dc6;
+    border-top-color:#C67100;
     display:inline-block;
     height:0;
     margin:0 0 0 4px;
@@ -5069,7 +5069,7 @@
 
 .bot-container .shipping-message {
     margin-top:2px;
-    color:#007dc6;
+    color:#C67100;
     font-size:12px;
     font-weight:600;
     line-height:1
@@ -5191,7 +5191,7 @@
 .choice-accordion-required .choice-required-add-price {
     display:block;
     width:100%;
-    background:#007dc6;
+    background:#C67100;
     color:#fff;
     font-size:14px;
     font-weight:600;
@@ -5297,7 +5297,7 @@
 }
 
 .choice-radio-label,.choice-accordion-radio-option .option label {
-    color:#007dc6;
+    color:#C67100;
     font-size:18px;
     font-weight:700
 }
@@ -5562,7 +5562,7 @@
 
 .choice-accordion-standard-read-more {
     display:none;
-    color:#007dc6;
+    color:#C67100;
     font-size:14px;
     font-weight:600
 }
@@ -5909,7 +5909,7 @@
     vertical-align:middle;
     margin:0 12px;
     width:20px;
-    color:#007dc6;
+    color:#C67100;
     font-size:38px;
     font-weight:700
 }
@@ -6017,7 +6017,7 @@
 .non-choice-hero-carousel .non-choice-hero-carousel-list .non-choice-hero-carousel-plus {
     display:table-cell;
     width:40px;
-    color:#007dc6;
+    color:#C67100;
     font-size:38px;
     font-weight:700;
     text-align:center;
@@ -6204,7 +6204,7 @@
     position:absolute;
     bottom:0;
     width:100%;
-    color:#007dc6;
+    color:#C67100;
     background-color:#fff
 }
 
@@ -6384,7 +6384,7 @@
 .comparison-table-container .ellipsis-read-more {
     padding:5px 0 0;
     margin-top:20px;
-    color:#007dc6;
+    color:#C67100;
     cursor:pointer;
     font-size:12px;
     font-weight:700;
@@ -6402,13 +6402,13 @@
     height:0;
     margin-top:8px;
     margin-left:5px;
-    border-color:#007dc6 transparent transparent;
+    border-color:#C67100 transparent transparent;
     border-style:solid;
     border-width:5px 4px
 }
 
 .comparison-table-container .ellipsis-read-more a.on:after {
-    border-color:transparent transparent #007dc6;
+    border-color:transparent transparent #C67100;
     margin-top:3px
 }
 
@@ -6607,7 +6607,7 @@
 .shipping-pass.full-width-banner {
     height:40px;
     padding:0 30px 0 20px;
-    background:#007dc6 url(//i5.walmartimages.com/dfw/63fd9f59-a9c9/k2-_15a6aa04-c095-4df4-a852-20073b3dd8ff.v1.png) no-repeat 100%;
+    background:#C67100 url(//i5.walmartimages.com/dfw/63fd9f59-a9c9/k2-_15a6aa04-c095-4df4-a852-20073b3dd8ff.v1.png) no-repeat 100%;
     background-size:20%;
     color:#fff;
     font-size:0;
@@ -6685,7 +6685,7 @@
 
 .btn-vote-group .btn-vote.active,.btn-vote-group .btn-vote:active {
     padding-left:14px;
-    border:2px solid #007dc6;
+    border:2px solid #C67100;
     line-height:26px
 }
 
@@ -6790,7 +6790,7 @@
     height:0;
     margin:0 0 0 10px;
     border:4px solid transparent;
-    border-top-color:#007dc6;
+    border-top-color:#C67100;
     vertical-align:middle;
     -webkit-transform:rotate(270deg);
     -ms-transform:rotate(270deg);
@@ -6935,7 +6935,7 @@
 .product-questionanswer-section .mweb-qa-section-heading {
     margin-bottom:17px;
     font-size:16px;
-    color:#007dc6
+    color:#C67100
 }
 
 @media (min-width:48em) {
@@ -7007,7 +7007,7 @@
     padding-top:25px;
     padding-left:5px;
     font-size:16px;
-    color:#007dc6
+    color:#C67100
 }
 
 .product-questionanswer-section .mweb-qa-paginator-back {
@@ -7398,7 +7398,7 @@
     height:0;
     margin-left:8px;
     border:4px solid transparent;
-    border-top-color:#007dc6;
+    border-top-color:#C67100;
     vertical-align:middle
 }
 
@@ -7517,7 +7517,7 @@
 .question.answers-expanded .qa-question:after {
     top:-4px;
     border-top-color:transparent;
-    border-bottom-color:#007dc6
+    border-bottom-color:#C67100
 }
 
 .qa-question-data {
@@ -7612,13 +7612,13 @@
 
 .qa-metadata .btn-answer {
     width:98%;
-    background:#007dc6;
+    background:#C67100;
     color:#fff
 }
 
 .qa-metadata .btn-cancel-answer {
     width:85%;
-    background:#007dc6;
+    background:#C67100;
     color:#fff
 }
 
@@ -7640,13 +7640,13 @@
 .qa-metadata .btn-answer {
     width:100%;
     background:#fff;
-    color:#007dc6
+    color:#C67100
 }
 
 .qa-metadata .btn-cancel-answer {
     width:100%;
     background:#fff;
-    color:#007dc6
+    color:#C67100
 }
 
 .qa-metadata .answer-buttons {
@@ -7799,7 +7799,7 @@
     height:0;
     margin:0 0 0 5px;
     border:4px solid transparent;
-    border-top-color:#007dc6;
+    border-top-color:#C67100;
     vertical-align:middle;
     -webkit-transform:rotate(90deg);
     -ms-transform:rotate(90deg);
@@ -7910,7 +7910,7 @@
 }
 
 .rating-selection-message-4 {
-    color:#007dc6
+    color:#C67100
 }
 
 .review-stats-rate {
@@ -8242,7 +8242,7 @@
     margin-top:10px;
     font-size:18px;
     font-weight:700;
-    color:#007dc6
+    color:#C67100
 }
 
 @media (min-width:30em) {
@@ -8504,7 +8504,7 @@
 .see-all-reviews .customer-review-report-btn {
     float:right;
     margin-top:6px;
-    color:#007dc6;
+    color:#C67100;
     font-size:12px;
     font-weight:400
 }
@@ -8615,7 +8615,7 @@
 
 .review-filters.expander .more-link {
     display:block;
-    width:83px;
+    width:99px;
     margin-right:18px
 }
 
@@ -8628,7 +8628,7 @@
 .review-filters.expander.expanded .more-link:after {
     top:4px;
     border-top-color:transparent;
-    border-bottom-color:#007dc6
+    border-bottom-color:#C67100
 }
 
 .review-filters.expander.expanded .more-link:hover:after {
@@ -8739,24 +8739,24 @@
     left:4px;
     width:0;
     height:0;
-    /*border-color:#007dc6 transparent transparent;*/
+    /*border-color:#C67100 transparent transparent;*/
     border-style:solid;
     border-width:4px;
     content:""
 }
 .customer-review-body .ellipsis-read-more a:after{
     top:10px;
-    border-color:#007dc6 transparent transparent;
+    border-color:#C67100 transparent transparent;
 }
 .customer-review-body .ellipsis-read-less a:after {
     top:-8px;
-    border-color:transparent transparent #007dc6 transparent;
+    border-color:transparent transparent #C67100 transparent;
 }
 
 .customer-review-body .ellipsis-read-more a.on:after {
     top:-10px;
     border-top-color:transparent;
-    border-bottom-color:#007dc6
+    border-bottom-color:#C67100
 }
 
 @media (min-width:48em) {
@@ -8856,7 +8856,7 @@
 }
 
 .review-histogram-wrapper .rating-val {
-    color:#007dc6;
+    color:#C67100;
     margin-left:6px
 }
 
@@ -8896,7 +8896,7 @@
     padding-top:8px;
     padding-left:5px;
     font-size:16px;
-    color:#007dc6
+    color:#C67100
 }
 
 .mweb-reco {
@@ -9068,7 +9068,7 @@
 }
 
 .module-p13n-recentlyviewed .rvi-list .rvi-tile.active {
-    border:2px solid #007dc6
+    border:2px solid #C67100
 }
 
 .module-p13n-recentlyviewed .rvi-list .rvi-product-name-bubble {
@@ -9561,7 +9561,7 @@
 }
 
 .mp-seller-reviews-list .customer-name-heavy {
-    color:#007dc6;
+    color:#C67100;
     font-weight:600;
     font-size:16px
 }
