@@ -9583,3 +9583,35 @@
   font-size: 14px;
   font-weight: 600;
 }
+
+
+.star-rated,
+.gicon-star-rated { 
+    /*background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20xmlns%3D%22../images/star_full.svg'); */
+  width: 18px;
+  height: 18px;
+  margin-left: 3px;
+  background-repeat: no-repeat;
+  font-style: normal;
+  vertical-align: middle;
+  background-image: url('../images/star_normal.svg');
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

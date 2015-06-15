@@ -10,335 +10,363 @@
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/histogram.css" type="text/css">
         <link rel="stylesheet" href="css/fonts.css" type="text/css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/bvAnalyticsAPITracker.min.js"></script>
-
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/ugc_inView.js"></script>
+ 
     </head>
     <body>
         <div class="wrapper">
-                <div class="grid review-header">
-                    <div class="col8">
-                        <p class="heading-a">
-                            Customer reviews
-                        </p>
-                    </div>
-                </div>
-                <div id="CGC_Container" class="see-all-reviews">
-                    <form class="review-list js-review-scroll-to">
-                        <div class="js-review-summary-header review-summary-header" data-view-cid="view35">
-                            <h2 class="visuallyhidden">
-                                Customer Reviews | 355 reviews | 3.8 out of 5
-                            </h2>
-                            <div class="review-summary Grid">
-                                <div class="Grid-col u-size-9-12-m">
-                                    <div class="Grid Grid--gutters">
-                                        <div class="Grid-col u-size-8-12-m">
-                                            <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="Grid-col u-size-1-2 stars stars-large pull-left hide-content display-inline-block-m">
+            <div class="grid product_description">
+                <div class="col12">
+                    <!-- <p class="heading-a">
+                        Product Headline
+                    </p> -->
+                    <div class="Grid-col u-size-6-12-m u-size-7-12-l" style="float:left;">
+                        <div class="Grid">
+                            <div class="Grid-col product-media-placeholder-section">
+                                <h1 class="heading-b product-name product-heading js-product-heading">
+                                    Product Headline
+                                </h1>
+                                <div class="product-subhead">
+                                    <div class="product-subhead-section-stars">
+                                        <div class="stars hide-content display-inline-l"> 
+                                            <a class="js-product-anchor display-block" href="#reviews" id="WMItemRevLnk">
                                                 <i class="star star-rated"></i>
                                                 <i class="star star-rated"></i>
                                                 <i class="star star-rated"></i>
                                                 <i class="star star-rated"></i>
                                                 <i class="star star-empty"></i>
                                                 <span class="visuallyhidden">4.0 stars</span>
-                                                <p class="heading-e">
-                                                    <span itemprop="ratingCount">355</span> reviews | <span itemprop="ratingValue">3.8</span> out of <span itemprop="bestRating">5</span>
-                                                </p>
-                                            </div>
-                                            <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="Grid-col u-size-1-2 stars stars mweb-stars pull-left hide-content-m">
-                                                <span class="visuallyhidden">4.0 stars</span>
-                                                <p class="heading-e">
-                                                    <span itemprop="ratingCount">355</span> reviews | <span itemprop="ratingValue">3.8</span> out of <span itemprop="bestRating">5</span>
-                                                </p>
-                                            </div>
-                                            <div class="Grid-col u-size-1-2 percentage-indicator-text-wrapper mweb-reco pull-left hide-content-m">
-                                                <div class="meter">
-                                                    <span style="width: 75%" class="meter-bar"><b class="meter-text">75%</b></span>
-                                                </div><span class="percentage-indicator-text">Would recommend to a friend</span>
-                                            </div>
-                                            <div class="review-histogram pull-left">
-                                                <div class="review-histogram-wrapper">
-                                                    <div class="js-rating-filter rating-filter" data-value="rating:eq:5">
-                                                        <div class="meter-inline">
-                                                            5 stars
-                                                        </div>
-                                                        <div class="meter histogram">
-                                                            <span style="width: 52%;" class="meter-bar"></span>
-                                                        </div>
-                                                        <span class="rating-val">165</span>
-                                                    </div>
-                                                    <div class="js-rating-filter rating-filter" data-value="rating:eq:4">
-                                                        <div class="meter-inline">
-                                                            4 stars
-                                                        </div>
-                                                        <div class="meter histogram">
-                                                            <span style="width: 26%;" class="meter-bar"></span>
-                                                        </div>
-                                                        <span class="rating-val">93</span>
-                                                    </div>
-                                                    <div class="js-rating-filter rating-filter" data-value="rating:eq:3">
-                                                        <div class="meter-inline">
-                                                            3 stars
-                                                        </div>
-                                                        <div class="meter histogram">
-                                                            <span style="width: 6%;" class="meter-bar"></span>
-                                                        </div>
-                                                    <span class="rating-val">22</span>
-                                                    </div>
-                                                    <div class="js-rating-filter rating-filter" data-value="rating:eq:2">
-                                                        <div class="meter-inline">
-                                                            2 stars
-                                                        </div>
-                                                        <div class="meter histogram">
-                                                            <span style="width: 0%;" class="meter-bar"></span>
-                                                        </div>
-                                                        <span class="rating-val">16</span>
-                                                    </div>
-                                                    <div class="js-rating-filter rating-filter" data-value="rating:eq:1">
-                                                        <div class="meter-inline">
-                                                            1 stars
-                                                        </div>
-                                                        <div class="meter histogram">
-                                                            <span style="width: 16%;" class="meter-bar"></span>
-                                                        </div>
-                                                        <span class="rating-val">59</span>
+                                            </a> 
+                                        </div>
+
+
+
+                                        <div class="stars hide-content display-inline-l">
+                                            <a class="js-product-anchor display-block" href="#reviews" id="WMItemRevLnk"><span class="visuallyhidden">4.0 stars</span></a>
+                                        </div>
+                                        <div class="stars-small hide-content-l">
+                                            <a class="js-product-anchor display-block" href="#reviews" id="WMItemRevLnk"><span class="visuallyhidden">4.0 stars</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-subhead-section">
+                                        <a class="js-product-anchor" href="#reviews">355 reviews</a> <span class="visuallyhidden">ratings</span>
+                                    </div>
+                                    <div class="product-subhead-section hide-content display-inline-s">
+                                        <a class="js-product-anchor" href="#qa" id="WMItemQALnk">Q&amp;A</a>
+                                    </div>
+                                    <div class="product-subhead-section hide-content display-inline-s">
+                                        By: <a href="/tp/rca" class="js-product-brand product-brand" id="WMItemBrandLnk">Some Brand</a>
+                                    </div>
+                                    <div class="product-subhead-section product-subhead-walmartnumber">
+                                        <span class="wm-bold">SKU #:</span> 550151681
+                                    </div>
+                                </div>
+                                <div class="js-product-media">
+                                    <div class="product-media js-product-media clearfix">
+                                        <div class="Grid">
+                                            <div class="Grid-col u-size-10-12-l js-hero-image-container" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;">
+                                                <div class="product-images js-product-images">
+                                                    <div class="product-images-viewport js-viewport">                             
+                                                        <img src="images/beer.jpg" data-zoom-image="" alt="" style="height:100%;">
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
-                                        <div class="hide-content-m">
-                                            <div class="Grid-col u-size-3-12-m review-sort">
-                                                <label class="label font-semibold">Sort by</label>
-
-
-                                                <div class="chooser js-chooser chooser-fixed-width chooser-alt active" style="width: 148px;">
-                                                    <div class="chooser-option-list rendered">
-                                                        <div class="chooser-option-current js-chooser-option-current" role="button" tabindex="0" aria-expanded="false">
-                                                            Most helpful
-                                                        </div>
-
-
-
-                                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" tabindex="-1">Most helpful</button>
-                                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" tabindex="-1">Newest to oldest</button>
-                                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" tabindex="-1">Oldest to newest</button>
-                                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" tabindex="-1">High to low rating</button>
-                                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" tabindex="-1">Low to high rating</button>
-                                                    </div>
-                                                </div>
-                                                <select class="js-selector js-reviews-sort chooser-alt chooser-fixed-width visuallyhidden" tabindex="-1" aria-hidden="true">
-                                                    <option selected value="helpful">
-                                                        Most helpful
-                                                    </option>
-                                                    <option value="submission-desc">
-                                                        Newest to oldest
-                                                    </option>
-                                                    <option value="submission-asc">
-                                                        Oldest to newest
-                                                    </option>
-                                                    <option value="rating-desc">
-                                                        High to low rating
-                                                    </option>
-                                                    <option value="rating-asc">
-                                                        Low to high rating
-                                                    </option>
-                                                </select>
-                                            </div>
-                                            <div class="review-stats mweb-review-stats copy-small pull-left">
-                                                1-3 of 289 total reviews
-                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="grid review-header">
+                <div class="col8">
+                    <p class="heading-a">
+                        Customer reviews
+                    </p>
+                </div>
+            </div>
+            <div id="CGC_Container" class="see-all-reviews">
+                <form class="review-list js-review-scroll-to">
+                    <div class="js-review-summary-header review-summary-header" data-view-cid="view35">
+                        <h2 class="visuallyhidden">
+                            Customer Reviews | 355 reviews | 3.8 out of 5
+                        </h2>
+                        <div class="review-summary Grid">
+                            <div class="Grid-col u-size-9-12-m">
+                                <div class="Grid Grid--gutters">
+                                    <div class="Grid-col u-size-8-12-m">
+                                        <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="Grid-col u-size-1-2 stars stars-large pull-left hide-content display-inline-block-m">
+                                            <i class="star star-rated"></i>
+                                            <i class="star star-rated"></i>
+                                            <i class="star star-rated"></i>
+                                            <i class="star star-rated"></i>
+                                            <i class="star star-empty"></i>
+                                            
+                                            <span class="visuallyhidden">4.0 stars</span>
+                                            <p class="heading-e">
+                                                <span itemprop="ratingCount">355</span> reviews | <span itemprop="ratingValue">3.8</span> out of <span itemprop="bestRating">5</span>
+                                            </p>
                                         </div>
-                                        <div class="Grid-col u-size-4-12-m percentage-indicator-text-wrapper hide-content display-inline-block-m">
+                                        <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="Grid-col u-size-1-2 stars stars mweb-stars pull-left hide-content-m">
+                                            <span class="visuallyhidden">4.0 stars</span>
+                                            <p class="heading-e">
+                                                <span itemprop="ratingCount">355</span> reviews | <span itemprop="ratingValue">3.8</span> out of <span itemprop="bestRating">5</span>
+                                            </p>
+                                        </div>
+                                        <div class="Grid-col u-size-1-2 percentage-indicator-text-wrapper mweb-reco pull-left hide-content-m">
                                             <div class="meter">
                                                 <span style="width: 75%" class="meter-bar"><b class="meter-text">75%</b></span>
                                             </div><span class="percentage-indicator-text">Would recommend to a friend</span>
                                         </div>
+                                        <div class="review-histogram pull-left">
+                                            <div class="review-histogram-wrapper">
+                                                <div class="js-rating-filter rating-filter" data-value="rating:eq:5">
+                                                    <div class="meter-inline">
+                                                        5 stars
+                                                    </div>
+                                                    <div class="meter histogram"></div><span class="rating-val">165</span>
+                                                </div>
+                                                <div class="js-rating-filter rating-filter" data-value="rating:eq:4">
+                                                    <div class="meter-inline">
+                                                        4 stars
+                                                    </div>
+                                                    <div class="meter histogram"></div><span class="rating-val">93</span>
+                                                </div>
+                                                <div class="js-rating-filter rating-filter" data-value="rating:eq:3">
+                                                    <div class="meter-inline">
+                                                        3 stars
+                                                    </div>
+                                                    <div class="meter histogram"></div><span class="rating-val">22</span>
+                                                </div>
+                                                <div class="js-rating-filter rating-filter" data-value="rating:eq:2">
+                                                    <div class="meter-inline">
+                                                        2 stars
+                                                    </div>
+                                                    <div class="meter histogram"></div><span class="rating-val">16</span>
+                                                </div>
+                                                <div class="js-rating-filter rating-filter" data-value="rating:eq:1">
+                                                    <div class="meter-inline">
+                                                        1 stars
+                                                    </div>
+                                                    <div class="meter histogram"></div><span class="rating-val">59</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hide-content-m">
+                                        <div class="Grid-col u-size-3-12-m review-sort">
+                                            <label class="label font-semibold">Sort by</label>
+                                            <div class="chooser js-chooser chooser-fixed-width chooser-alt active" style="width: 148px;">
+                                                <div class="chooser-option-list rendered">
+                                                    <div class="chooser-option-current js-chooser-option-current" role="button" tabindex="0" aria-expanded="false">
+                                                        Most helpful
+                                                    </div><button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" tabindex="-1">Most helpful</button> <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" tabindex="-1">Newest to oldest</button> <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" tabindex="-1">Oldest to newest</button> <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" tabindex="-1">High to low rating</button> <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" tabindex="-1">Low to high rating</button>
+                                                </div>
+                                            </div><select class="js-selector js-reviews-sort chooser-alt chooser-fixed-width visuallyhidden" tabindex="-1" aria-hidden="true">
+                                                <option selected value="helpful">
+                                                    Most helpful
+                                                </option>
+                                                <option value="submission-desc">
+                                                    Newest to oldest
+                                                </option>
+                                                <option value="submission-asc">
+                                                    Oldest to newest
+                                                </option>
+                                                <option value="rating-desc">
+                                                    High to low rating
+                                                </option>
+                                                <option value="rating-asc">
+                                                    Low to high rating
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="review-stats mweb-review-stats copy-small pull-left">
+                                            1-3 of 289 total reviews
+                                        </div>
+                                    </div>
+                                    <div class="Grid-col u-size-4-12-m percentage-indicator-text-wrapper hide-content display-inline-block-m">
+                                        <div class="meter">
+                                            <span style="width: 75%" class="meter-bar"><b class="meter-text">75%</b></span>
+                                        </div><span class="percentage-indicator-text">Would recommend to a friend</span>
                                     </div>
                                 </div>
-                                <div class="Grid-col u-size-3-12-m">
-                                    <a href="#" class="js-write-review btn pull-right" id="WMItemWriteReviewLnk">Write a review</a>
+                            </div>
+                            <div class="Grid-col u-size-3-12-m">
+                                <a href="" class="js-write-review btn pull-right" id="WMItemWriteReviewLnk">Write a review</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-review-content-list" data-view-cid="view37">
+                        <input type="hidden" name="currentLimit" class="review-limit" value="3"> <input type="hidden" name="currentPage" class="review-page" value="1"> <input type="hidden" name="currentSort" class="review-sort" value="helpful"> <input type="hidden" name="rating" class="review-rating" value="">
+                        <div class="js-review-filters review-filters expander hide-content display-inline-block-m">
+                            <div class="Grid">
+                                <div class="Grid-col u-size-9-12-m review-filter-toggle-container">
+                                    <div class="review-filter-toggle">
+                                        <a class="js-expander-toggle more-link" href="#" id="WMItemAgeShowFltrLnk">Show filters</a>
+                                    </div>
+                                </div>
+                                <div class="Grid-col u-size-3-12-m review-sort">
+                                    <label class="label font-semibold">Sort by</label>
+                                    <div class="chooser js-chooser chooser-fixed-width chooser-alt" style="width: 148px;">
+                                        <div class="chooser-option-list rendered">
+                                            <div class="chooser-option-current js-chooser-option-current" role="button" tabindex="0" aria-expanded="false">
+                                                Most helpful
+                                            </div><button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" tabindex="-1">Most helpful</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" tabindex="-1">Newest to oldest</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" tabindex="-1">Oldest to newest</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" tabindex="-1">High to low rating</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" tabindex="-1">Low to high rating</button>
+                                        </div>
+                                    </div><select class="js-selector js-reviews-sort chooser-alt chooser-fixed-width visuallyhidden" tabindex="-1" aria-hidden="true">
+                                        <option selected value="helpful">
+                                            Most helpful
+                                        </option>
+                                        <option value="submission-desc">
+                                            Newest to oldest
+                                        </option>
+                                        <option value="submission-asc">
+                                            Oldest to newest
+                                        </option>
+                                        <option value="rating-desc">
+                                            High to low rating
+                                        </option>
+                                        <option value="rating-asc">
+                                            Low to high rating
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="expander-content module age-gender-filters">
+                                <div class="Grid">
+                                    <div class="Grid-col u-size-4-12-m pull-left">
+                                        <p class="heading-e">
+                                            Age
+                                        </p>
+                                        <div class="Grid grid-padded js-reviews-filter js-age-filter">
+                                            <div class="Grid-col u-size-6-12-m">
+                                                <ul class="block-list module">
+                                                    <li class="option" data-filter="age:18-24">
+                                                        <input type="checkbox" name="age-1" id="age-1" value="contextdatavalue_age:18-24"> <label for="age-1">18-24</label>
+                                                    </li>
+                                                    <li class="option" data-filter="age:25-34">
+                                                        <input type="checkbox" name="age-2" id="age-2" value="contextdatavalue_age:25-34"> <label for="age-2">25-34</label>
+                                                    </li>
+                                                    <li class="option" data-filter="age:35-44">
+                                                        <input type="checkbox" name="age-3" id="age-3" value="contextdatavalue_age:35-44"> <label for="age-3">35-44</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="Grid-col u-size-6-12-m">
+                                                <ul class="block-list module">
+                                                    <li class="option" data-filter="age:45-54">
+                                                        <input type="checkbox" name="age-4" id="age-4" value="contextdatavalue_age:45-54"> <label for="age-4">45-54</label>
+                                                    </li>
+                                                    <li class="option" data-filter="age:55-64">
+                                                        <input type="checkbox" name="age-5" id="age-5" value="contextdatavalue_age:55-64"> <label for="age-5">55-64</label>
+                                                    </li>
+                                                    <li class="option" data-filter="age:65%2B">
+                                                        <input type="checkbox" name="age-6" id="age-6" value="contextdatavalue_age:65%2B"> <label for="age-6">65 and older</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Grid-col u-size-2-12-m pull-left">
+                                        <p class="heading-e">
+                                            Gender
+                                        </p>
+                                        <ul class="block-list module js-reviews-filter js-gender-filter">
+                                            <li class="option" data-filter="gender:male">
+                                                <input type="checkbox" name="gender-1" id="gender-1" value="contextdatavalue_gender:male"> <label for="gender-1">Male</label>
+                                            </li>
+                                            <li class="option" data-filter="gender:female">
+                                                <input type="checkbox" name="gender-2" id="gender-2" value="contextdatavalue_gender:female"> <label for="gender-2">Female</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="js-review-content-list" data-view-cid="view37">
-                            <input type="hidden" name="currentLimit" class="review-limit" value="3"> <input type="hidden" name="currentPage" class="review-page" value="1"> <input type="hidden" name="currentSort" class="review-sort" value="helpful"> <input type="hidden" name="rating" class="review-rating" value="">
-                            <div class="js-review-filters review-filters expander hide-content display-inline-block-m">
-                                <div class="Grid">
-                                    <div class="Grid-col u-size-9-12-m review-filter-toggle-container">
-                                        <div class="review-filter-toggle">
-                                            <a class="js-expander-toggle more-link" href="#" id="WMItemAgeShowFltrLnk">Show filters</a>
-                                        </div>
-                                    </div>
-                                    <div class="Grid-col u-size-3-12-m review-sort">
-                                        <label class="label font-semibold">Sort by</label>
-                                        <div class="chooser js-chooser chooser-fixed-width chooser-alt" style="width: 148px;">
-                                            <div class="chooser-option-list rendered">
-                                                <div class="chooser-option-current js-chooser-option-current" role="button" tabindex="0" aria-expanded="false">
-                                                    Most helpful
-                                                </div><button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" tabindex="-1">Most helpful</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" tabindex="-1">Newest to oldest</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" tabindex="-1">Oldest to newest</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" tabindex="-1">High to low rating</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" tabindex="-1">Low to high rating</button>
-                                            </div>
-                                        </div><select class="js-selector js-reviews-sort chooser-alt chooser-fixed-width visuallyhidden" tabindex="-1" aria-hidden="true">
-                                            <option selected value="helpful">
-                                                Most helpful
-                                            </option>
-                                            <option value="submission-desc">
-                                                Newest to oldest
-                                            </option>
-                                            <option value="submission-asc">
-                                                Oldest to newest
-                                            </option>
-                                            <option value="rating-desc">
-                                                High to low rating
-                                            </option>
-                                            <option value="rating-asc">
-                                                Low to high rating
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="expander-content module age-gender-filters">
+                        <div class="js-review-list">
+                            <div class="Grid customer-review js-customer-review" data-content-id="14897106" data-view-cid="view39" data-model-cid="c40">
+                                <div class="Grid-col u-size-8-12-m customer-review-body">
                                     <div class="Grid">
-                                        <div class="Grid-col u-size-4-12-m pull-left">
-                                            <p class="heading-e">
-                                                Age
-                                            </p>
-                                            <div class="Grid grid-padded js-reviews-filter js-age-filter">
-                                                <div class="Grid-col u-size-6-12-m">
-                                                    <ul class="block-list module">
-                                                        <li class="option" data-filter="age:18-24">
-                                                            <input type="checkbox" name="age-1" id="age-1" value="contextdatavalue_age:18-24"> <label for="age-1">18-24</label>
-                                                        </li>
-                                                        <li class="option" data-filter="age:25-34">
-                                                            <input type="checkbox" name="age-2" id="age-2" value="contextdatavalue_age:25-34"> <label for="age-2">25-34</label>
-                                                        </li>
-                                                        <li class="option" data-filter="age:35-44">
-                                                            <input type="checkbox" name="age-3" id="age-3" value="contextdatavalue_age:35-44"> <label for="age-3">35-44</label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="Grid-col u-size-6-12-m">
-                                                    <ul class="block-list module">
-                                                        <li class="option" data-filter="age:45-54">
-                                                            <input type="checkbox" name="age-4" id="age-4" value="contextdatavalue_age:45-54"> <label for="age-4">45-54</label>
-                                                        </li>
-                                                        <li class="option" data-filter="age:55-64">
-                                                            <input type="checkbox" name="age-5" id="age-5" value="contextdatavalue_age:55-64"> <label for="age-5">55-64</label>
-                                                        </li>
-                                                        <li class="option" data-filter="age:65%2B">
-                                                            <input type="checkbox" name="age-6" id="age-6" value="contextdatavalue_age:65%2B"> <label for="age-6">65 and older</label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                        <div class="Grid-col u-size-10-12-m customer-review-title">
+                                            Excellent for the price
+                                        </div><span class="Grid-col u-size-2-12-m customer-review-date hide-content display-inline-block-m">6/10/2015</span>
+                                    </div>
+                                    <h3 class="visuallyhidden">
+                                        Customer review by BazaarVoice Developer
+                                    </h3>
+                                    <div class="stars customer-stars">
+                                        <span class="visuallyhidden">5.0 stars</span> <span class="customer-review-date hide-content-m">9/13/2013</span> <span class="customer-name hide-content display-inline-block-m">by <span class="customer-name-heavy">BazaarVoice Developer</span></span>
+                                    </div>
+                                    <div class="customer-name hide-content-m">
+                                        by <span class="customer-name-heavy">BazaarVoice Developer</span>
+                                    </div>
+                                    <div class="customer-review-text">
+                                        <p class="js-customer-review-text" data-max-height="110"></p>
+                                        <div class="ellipsis-content module" style="max-height: 110px;">
+                                            Purchased this item when my larger one died. I was a little hesitant because of the size which was much smaller than my old one, but have found it to be quite adequate. I decided on this model for 3 reasons. The reputable brand. the good reviews and most important the door pulls open there is no button to push that will wear out. I have been using this appliance for about 2 months now and find it to be an exceptional value. It even reminds me when I forget I have heated something. The timer can be used at the same time you cook which was very nice to find. It heats quickly so quickly in fact I have found it takes much less time than my larger one did and have had to adjust the times on some things..it also cooks and heats more evenly. The control panel is flat. Easy to clean and is relatively quite. Over all I am very pleased with the purchase. I will purchase it again if it is still available when I need another new one. I highly recommend this oven. It is a great deal for the money. It also arrived 5 days ahead of schedule.
+                                        </div>
+                                        <div class="js-ellipsis-read-more ellipsis-read-more">
+                                            <a href="#">Read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="btn-vote-group js-btn-vote-group customer-review-voting hide-content display-inline-block-m">
+                                        <span class="btn-vote-heading">Was this review helpful?</span> <button type="button" class="btn btn-vote js-btn-vote-yes">Yes</button> <span class="btn-vote-count">(<span class="js-vote-positive-count">165</span>)</span> <button type="button" class="btn btn-vote js-btn-vote-no">No</button> <span class="btn-vote-count">(<span class="js-vote-negative-count">4</span>)</span> <button class="btn btn-link customer-review-report-btn js-btn-report pull-right">&nbsp;Report</button>
+                                        <div class="pull-right hide-content thank-you-report js-thank-you-report">
+                                            Thank you! You have successfully submitted feedback for this review.
+                                        </div>
+                                    </div>
+                                    <div class="Grid Grid--gutters btn-vote-group js-btn-vote-group customer-review-voting hide-content-m">
+                                        <div class="Grid-col">
+                                            <div class="btn-vote-heading">
+                                                Was this answer helpful?
                                             </div>
                                         </div>
-                                        <div class="Grid-col u-size-2-12-m pull-left">
-                                            <p class="heading-e">
-                                                Gender
-                                            </p>
-                                            <ul class="block-list module js-reviews-filter js-gender-filter">
-                                                <li class="option" data-filter="gender:male">
-                                                    <input type="checkbox" name="gender-1" id="gender-1" value="contextdatavalue_gender:male"> <label for="gender-1">Male</label>
-                                                </li>
-                                                <li class="option" data-filter="gender:female">
-                                                    <input type="checkbox" name="gender-2" id="gender-2" value="contextdatavalue_gender:female"> <label for="gender-2">Female</label>
-                                                </li>
-                                            </ul>
+                                        <div class="Grid-col u-size-1-2">
+                                            <button type="button" class="btn btn-vote js-btn-vote-yes">Yes&nbsp;<span class="btn-vote-count">(<span class="js-vote-positive-count-mweb">165</span>)</span></button>
+                                        </div>
+                                        <div class="Grid-col u-size-1-2">
+                                            <button type="button" class="btn btn-vote js-btn-vote-no">No&nbsp;<span class="btn-vote-count">(<span class="js-vote-negative-count-mweb">4</span>)</span></button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="js-review-list">
-                                <div class="Grid customer-review js-customer-review" data-content-id="14897106" data-view-cid="view39" data-model-cid="c40">
-                                    <div class="Grid-col u-size-8-12-m customer-review-body">
-                                        <div class="Grid">
-                                            <div class="Grid-col u-size-10-12-m customer-review-title">
-                                                Excellent for the price
-                                            </div><span class="Grid-col u-size-2-12-m customer-review-date hide-content display-inline-block-m">6/10/2015</span>
-                                        </div>
-                                        <h3 class="visuallyhidden">
-                                            Customer review by BazaarVoice Developer
-                                        </h3>
-                                        <div class="stars customer-stars">
-                                            <span class="visuallyhidden">5.0 stars</span> <span class="customer-review-date hide-content-m">9/13/2013</span> <span class="customer-name hide-content display-inline-block-m">by <span class="customer-name-heavy">BazaarVoice Developer</span></span>
-                                        </div>
-                                        <div class="customer-name hide-content-m">
-                                            by <span class="customer-name-heavy">BazaarVoice Developer</span>
-                                        </div>
-                                        <div class="customer-review-text">
-                                            <p class="js-customer-review-text" data-max-height="110"></p>
-                                            <div class="ellipsis-content module" style="max-height: 110px;">
-                                                Purchased this item when my larger one died. I was a little hesitant because of the size which was much smaller than my old one, but have found it to be quite adequate. I decided on this model for 3 reasons. The reputable brand. the good reviews and most important the door pulls open there is no button to push that will wear out. I have been using this appliance for about 2 months now and find it to be an exceptional value. It even reminds me when I forget I have heated something. The timer can be used at the same time you cook which was very nice to find. It heats quickly so quickly in fact I have found it takes much less time than my larger one did and have had to adjust the times on some things..it also cooks and heats more evenly. The control panel is flat. Easy to clean and is relatively quite. Over all I am very pleased with the purchase. I will purchase it again if it is still available when I need another new one. I highly recommend this oven. It is a great deal for the money. It also arrived 5 days ahead of schedule.
-                                            </div>
-                                            <div class="js-ellipsis-read-more ellipsis-read-more">
-                                                <a href="#">Read more</a>
-                                            </div>
-                                        </div>
-                                        <div class="btn-vote-group js-btn-vote-group customer-review-voting hide-content display-inline-block-m">
-                                            <span class="btn-vote-heading">Was this review helpful?</span>
-                                            <button type="button" class="btn btn-vote js-btn-vote-yes">
-                                                <i class="btn-vote-up"></i>Yes
-                                            </button>
-                                            <span class="btn-vote-count">(<span class="js-vote-positive-count">165</span>)</span>
-                                            <button type="button" class="btn btn-vote js-btn-vote-no">
-                                                <i class="btn-vote-down"></i>No
-                                            </button>
-                                            
-                                            <span class="btn-vote-count">(<span class="js-vote-negative-count">4</span>)</span>
-                                            <button class="btn btn-link customer-review-report-btn js-btn-report pull-right">
-                                                <i class="wmicon wmicon-flag"></i>&nbsp;Report
-                                            </button>
-                                            <div class="pull-right hide-content thank-you-report js-thank-you-report">
-                                                Thank you! You have successfully submitted feedback for this review.
-                                            </div>
-                                        </div>
-                                        <div class="Grid Grid--gutters btn-vote-group js-btn-vote-group customer-review-voting hide-content-m">
-                                            <div class="Grid-col">
-                                                <div class="btn-vote-heading">
-                                                    Was this answer helpful?
-                                                </div>
-                                            </div>
-                                            <div class="Grid-col u-size-1-2">
-                                                <button type="button" class="btn btn-vote js-btn-vote-yes">Yes&nbsp;<span class="btn-vote-count">(<span class="js-vote-positive-count-mweb">165</span>)</span></button>
-                                            </div>
-                                            <div class="Grid-col u-size-1-2">
-                                                <button type="button" class="btn btn-vote js-btn-vote-no">No&nbsp;<span class="btn-vote-count">(<span class="js-vote-negative-count-mweb">4</span>)</span></button>
-                                            </div>
-                                        </div>
+                                <div class="Grid-col u-size-4-12-m customer-info hide-content display-inline-block-m">
+                                    <div>
+                                        BazaarVoice Developer
                                     </div>
-                                    <div class="Grid-col u-size-4-12-m customer-info hide-content display-inline-block-m">
+                                    <div class="customer-location">
+                                        Austin, Texas
+                                    </div>
+                                    <div class="customer-attributes">
                                         <div>
-                                            BazaarVoice Developer
+                                            Would recommend to a friend? <span>Yes</span>
                                         </div>
-                                        <div class="customer-location">
-                                            Austin, Texas
+                                        <div>
+                                            Age:<span>25 - 34</span>
                                         </div>
-                                        <div class="customer-attributes">
-                                            <div>
-                                                Would recommend to a friend? <span>Yes</span>
-                                            </div>
-                                            <div>
-                                                Age:<span>25 - 34</span>
-                                            </div>
-                                            <div>
-                                                Ownership:<span>2 - 3 months</span>
-                                            </div>
-                                            <div>
-                                                Gender:<span>Male</span>
-                                            </div>
-                                            <div>
-                                                Usage:<span>Every day</span>
-                                            </div>
+                                        <div>
+                                            Ownership:<span>2 - 3 months</span>
                                         </div>
-                                        <div class="review-badges-container">
-                                            <div class="review-badge">
-                                                <i class="wmicon wmicon-user"></i>Staff
-                                            </div>
+                                        <div>
+                                            Gender:<span>Male</span>
+                                        </div>
+                                        <div>
+                                            Usage:<span>Every day</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-badges-container">
+                                        <div class="review-badge">
+                                            Staff
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 2nd review -->
-                                <!-- <div class="Grid customer-review js-customer-review" data-content-id="8141362" data-view-cid="view42" data-model-cid="c43">
+                            </div><!-- 2nd review -->
+                            <!-- <div class="Grid customer-review js-customer-review" data-content-id="8141362" data-view-cid="view42" data-model-cid="c43">
                                     <div class="Grid-col u-size-8-12-m customer-review-body">
                                         <div class="Grid">
                                             <div class="Grid-col u-size-10-12-m customer-review-title">
@@ -369,7 +397,7 @@
                                                 Thank you! You have successfully submitted feedback for this review.
                                             </div>
                                         </div>
-                                        <div class="Grid Grid--gutters btn-vote-group js-btn-vote-group customer-review-voting hide-content-m">
+                                        <div class="Grid Grid==gutters btn-vote-group js-btn-vote-group customer-review-voting hide-content-m">
                                             <div class="Grid-col">
                                                 <div class="btn-vote-heading">
                                                     Was this answer helpful?
@@ -414,8 +442,8 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <!-- 3rd review -->
-                                <!--  <div class="Grid customer-review js-customer-review" data-content-id="15852330" data-view-cid="view46" data-model-cid="c47">
+                            <!-- 3rd review -->
+                            <!--  <div class="Grid customer-review js-customer-review" data-content-id="15852330" data-view-cid="view46" data-model-cid="c47">
                                     <div class="Grid-col u-size-8-12-m customer-review-body">
                                         <div class="Grid">
                                             <div class="Grid-col u-size-10-12-m customer-review-title">
@@ -446,7 +474,7 @@
                                                 Thank you! You have successfully submitted feedback for this review.
                                             </div>
                                         </div>
-                                        <div class="Grid Grid--gutters btn-vote-group js-btn-vote-group customer-review-voting hide-content-m">
+                                        <div class="Grid Grid==gutters btn-vote-group js-btn-vote-group customer-review-voting hide-content-m">
                                             <div class="Grid-col">
                                                 <div class="btn-vote-heading">
                                                     Was this answer helpful?
@@ -499,29 +527,52 @@
                                         </div>
                                     </div>
                                 </div> -->
-                            </div>
-                            <div class="js-review-pagination-bottom">
-                                <div class="review-pagination js-review-pagination">
-                                    <div class="paginator-list pull-left">
-                                        <ul>
-                                            <li><a href="#" role="button" class="js-pagination link active" data-page="1">1</a></li>
-                                            <li><a href="#" role="button" class="js-pagination link" data-page="2">2</a></li>
-                                            <li><a href="#" role="button" class="js-pagination link" data-page="3">3</a></li>
-                                            <li><a href="#" role="button" class="js-pagination link" data-page="4">4</a></li>
-                                            <li><a href="#" role="button" class="js-pagination link" data-page="5">5</a></li>
-                                            <li><a href="#" role="button" class="js-pagination link" data-page="6">6</a></li>
-                                            <li><a href="#" role="button" class="js-pagination link" data-page="9">9</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="review-stats copy-small pull-right">
-                                        <span>1 of 355 total reviews</span> <a href="#" class="js-reviews-see-all arrow-link" id="WMItemSeeAllRevLnk">See all</a>
-                                    </div>
+                        </div>
+                        <div class="js-review-pagination-bottom">
+                            <div class="review-pagination js-review-pagination">
+                                <div class="paginator-list pull-left">
+                                    <ul>
+                                        <li>
+                                            <a href="#" role="button" class="js-pagination link active" data-page="1">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" role="button" class="js-pagination link" data-page="2">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" role="button" class="js-pagination link" data-page="3">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" role="button" class="js-pagination link" data-page="4">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" role="button" class="js-pagination link" data-page="5">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" role="button" class="js-pagination link" data-page="6">6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" role="button" class="js-pagination link" data-page="9">9</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="review-stats copy-small pull-right">
+                                    <span>1 of 355 total reviews</span> <a href="#" class="js-reviews-see-all arrow-link" id="WMItemSeeAllRevLnk">See all</a>
                                 </div>
                             </div>
-                            <div class="mweb-review-button hide-content-m"></div>
                         </div>
-                    </form>
-                </div>
-            </div>  
+                        <div class="mweb-review-button hide-content-m"></div>
+                    </div>
+                    <div class="footer-copyright"> 
+                        <div class="container container-responsive ResponsiveContainer"> 
+                            <div class="footer-copyright-text "> BazaarVoice Sample. 
+                                <span class="reference-id-explanation js-reference-id-explanation"> 
+                                    <span class="reference-id-text-desktop hide-content display-inline-m">Please visit our other samples</span>
+                                </span> 
+                            </div> 
+                        </div> 
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>

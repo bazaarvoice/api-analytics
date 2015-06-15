@@ -1,5 +1,4 @@
-// A $( document ).ready() block.
-$( document ).ready(function() {
+$( document ).ready(function() {    
     
     //fire off Page View Product
     // _bvapiq.push(['PageViewProduct', {
@@ -39,7 +38,20 @@ $( document ).ready(function() {
     });
 
 
-    // show filters
+    //filters
+    $(" .js-expander-toggle.more-link").click(function(){
+    // css trickey
+        $(".expander-content.module.age-gender-filters").css("display", "block");
+        // change the text
+        $(" .review-filter-toggle .more-link").text("Hide filters");
+        filterClick($(this));
+    });
+
+    //sub Filter
+    $(".block-list.module li input").click(function(){
+       subFilterClick($(this));
+    });
+
 
     // sort by
     $( ".chooser-option-current.js-chooser-option-current" ).click(function() {
@@ -73,7 +85,6 @@ $( document ).ready(function() {
 
     // read more
     $( ".js-ellipsis-read-more.ellipsis-read-more a" ).click(function() {
-        debugger;
         // start some css trickery
         $('.ellipsis-content.module').css("max-height", "360px");
         $( ".ellipsis-read-more a" ).text('Read Less');
@@ -85,7 +96,6 @@ $( document ).ready(function() {
     });
     // read less
     $( ".js-ellipsis-read-more.ellipsis-read-less a" ).click(function() {
-        debugger
         readLessClick($(this));
     });
     // report
@@ -105,6 +115,14 @@ $( document ).ready(function() {
         paginationClick($(this));
     });
 });
+
+
+function filterClick(item){
+    console.log('filter');
+}
+function subFilterClick(item){
+    console.log('subFilter');
+}
 function sortClick(item){
     console.log('sort');
 }
