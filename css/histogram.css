@@ -8483,6 +8483,12 @@
     margin-top:14px;
     height:auto
 }
+.customer-review-text .ellipsis-content.module{
+        max-height: 110px;
+}
+.customer-review-text .ellipsis-content.module.expanded{
+    max-height: 360px;
+} 
 
 @media (min-width:48em) {
 .see-all-reviews .customer-review-text {
@@ -9598,6 +9604,18 @@
   display: inline-block;
 }
 
+.star-empty,
+.gicon-star-rated { 
+    /*background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20xmlns%3D%22../images/star_full.svg'); */
+  width: 18px;
+  height: 18px;
+  margin-left: 3px;
+  background-repeat: no-repeat;
+  font-style: normal;
+  vertical-align: middle;
+  background-image: url('../images/star_normal_empty.svg');
+  display: inline-block;
+}
 
 
 
