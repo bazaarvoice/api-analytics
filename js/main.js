@@ -1,6 +1,6 @@
 /*GLOBAL VARS
 */
-var fo={
+var featureObject={
     clientID: 'testClient',
     environment: 'staging',
     dc: 'custom_DC',
@@ -46,9 +46,6 @@ $( document ).ready(function() {
 
 
 
-   
-
-
     //filters
     $(" .review-filter-toggle").on('click', '.more-link', function(e) {
         e.preventDefault();
@@ -69,36 +66,36 @@ $( document ).ready(function() {
 
 
     //sub Filter
-    $(".block-list.module li input").click(function(){
+    $(".block-list.module li input").on('click', function(e) {
        subFilterClick($(this));
     });
 
 
     // sort by
-    $( ".chooser-option-current.js-chooser-option-current" ).click(function() {
+    $( ".chooser-option-current.js-chooser-option-current" ).on('click', function(e) {
         //do some css trickery
         $( ".chooser-option-current.js-chooser-option-current" ).addClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).addClass('active');
         sortClick($(this));
     });
     //sort by sub filter
-    $(" .chooser-option.js-chooser-option").click(function(){
+    $(" .chooser-option.js-chooser-option").on('click', function(e) {
         subSortClick($(this));
         $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
     });
 
     // write a review
-    $( "#WMItemWriteReviewLnk" ).click(function() {
+    $( "#WMItemWriteReviewLnk" ).on('click', function(e) {
         writeReviewClick($(this));
     });
     // review helpful
         // yes
-        $( ".btn-vote.js-btn-vote-yes" ).click(function() {
+        $( ".btn-vote.js-btn-vote-yes" ).on('click', function(e) {
             helpfulYesClick($(this));
         });
         // no
-        $( ".btn-vote.js-btn-vote-no" ).click(function() {
+        $( ".btn-vote.js-btn-vote-no" ).on('click', function(e) {
             helpfulNoClick($(this));
         });
 
@@ -119,23 +116,39 @@ $( document ).ready(function() {
     });
 
     // report
-    $( ".customer-review-report-btn" ).click(function() {
+    $( ".customer-review-report-btn" ).on('click', function(e) {
         reportClick($(this));
     });
     // badge (e.g. verified purchaser, top 100 contributor)
-    $( ".review-badge" ).click(function() {
+    $( ".review-badge" ).on('click', function(e) {
         badgeClick($(this));
     }); 
     // see all > 
-    $( ".js-reviews-see-all.arrow-link" ).click(function() {
+    $( ".js-reviews-see-all.arrow-link" ).on('click', function(e) {
         seeAllClick($(this));
     });
     // pagination
-    $( ".paginator-list ul li a" ).click(function() {
+    $( ".paginator-list ul li a" ).on('click', function(e) {
         paginationClick($(this));
     });
+    // stars Histogram
+    $( ".js-rating-filter.rating-filter" ).on('click', function(e) {
+        starsHistogramClick($(this));
+    });
+
 });
     
+
+//we need to have a controlled vocabulary for the details values
+//that is used to construct the feature object. What has been 
+//suggested is:
+//1. filter
+//2. sort
+//3. paginate
+
+//?? should the the details2 value be the ID of the control? What does 
+//that get us?
+
 
 function filterClick(item){
     console.log('filter');
@@ -154,7 +167,7 @@ function helpfulNoClick(item){
 }
 function helpfulYesClick(item){
     console.log('Helpful - yes');
-    createFeatureUsed('btn', 'helpful-yes');
+    constructFeatureUsed('btn', 'helpful-yes');
 }
 function writeReviewClick(item){
     console.log('write Review');
@@ -167,28 +180,30 @@ function readLessClick(item){
 }
 function reportClick(item){
     console.log('report');
-    createFeatureUsed('link', "see_all");
+    constructFeatureUsed('link', "see_all");
 }
 function paginationClick(item){
     console.log('pagination');
     //get the actual page value they clicked on. 
-    createFeatureUsed('pagination', $(item).text());
+    constructFeatureUsed('pagination', $(item).text());
 }
 function seeAllClick(item){
-    console.log('seeAll'); 
-    createFeatureUsed('link', "see_all");
+    console.log('seeAll');
+    constructFeatureUsed('link', "see_all");
 }
 function badgeClick(item){
     console.log('badge');
-    createFeatureUsed('link', "badge");
+    constructFeatureUsed('link', "badge");
+}
+function starsHistogramClick(item){
+    console.log('starsHistogramClick');
+    constructFeatureUsed('link', "stars");
 }
 
 
 /*CONSTRUCT THE OBJECT*/
 function constructFeatureUsed(detail1, detail2){
-    fo.detail1 = detail1;
-    fo.detail2 = detail2;
-
-    return fo;
-
+    featureObject.detail1 = detail1;
+    featureObject.detail2 = detail2;
+    debugger;
 }
