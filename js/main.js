@@ -1,9 +1,25 @@
 /*GLOBAL VARS
 */
+
+var clientId = 'testClient',
+    env = 'staging',
+    displayCode = '',
+    name = '',
+    brand = '',
+    productId = '',
+    categoryId = '',
+    rootCategoryId ='',
+    numReviews = 1,
+    numQuestions = 0,
+    numAnswers = 0,
+    avgRating = 5.0,
+    percentRecommended = 100;
+
+
 var featureObject={
-    clientID: 'testClient',
-    environment: 'staging',
-    dc: 'custom_DC',
+    clientID: clientId,
+    environment: env,
+    dc: displayCode,
     name: '',
     brand: '',
     productId: '',
@@ -14,25 +30,24 @@ var featureObject={
 
 
 
-$( document ).ready(function() {    
+
+$( document ).ready(function() {
     
     //fire off Page View Product
-    // _bvapiq.push(['PageViewProduct', {
-    //     clientID: 'testClient',
-    //     environment: 'staging',
-    //     dc: "custom_DC",
-    //     productId: '1234567-bunnyhat',
-    //     brand: 'Test Brand',
-    //     categoryId: 'hats',
-    //     rootCategoryId: 'garments',
-    //     numReviews: 1,
-    //     numQuestions: 0,
-    //     numAnswers: 0,
-    //     avgRating: 5.0,
-    //     percentRecommended: 100
-    // } ]);
-
-
+     _bvapiq.push(['PageViewProduct', {
+        clientID: clientId,
+        environment: env,
+        dc: displayCode,
+        productId: productId,
+        brand: brand,
+        categoryId: categoryId,
+        rootCategoryId: rootCategoryId,
+        numReviews: numReviews,
+        numQuestions: numQuestions,
+        numAnswers: numAnswers,
+        avgRating: avgRating,
+        percentRecommended: percentRecommended
+    } ]);
 
 
     // CSS hover styling
@@ -43,9 +58,6 @@ $( document ).ready(function() {
             $( this ).removeClass( "active" );
         }
     );
-
-
-
     //filters
     $(" .review-filter-toggle").on('click', '.more-link', function(e) {
         e.preventDefault();
@@ -205,5 +217,4 @@ function starsHistogramClick(item){
 function constructFeatureUsed(detail1, detail2){
     featureObject.detail1 = detail1;
     featureObject.detail2 = detail2;
-    debugger;
 }
