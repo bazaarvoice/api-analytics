@@ -1,4 +1,4 @@
-Bazaarvoice API Analytics 
+Bazaarvoice API Analytics starter kit
 ================
 
 Bazaarvoice API Analytics is a sample that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
@@ -6,14 +6,9 @@ Bazaarvoice API Analytics is a sample that demonstrates how API users should imp
 How to Use:
 ----------------
 
-###Download the code
-```
+1. Download the code
+2. Host the code on a server
+3. Inspect the code - Using developer extension investigate the diffent controls and the js code associated with interacting with them.
 
-###Host the code on a server
-```
-
-###Inspect the code
-Using developer extension investigate the diffent controls and the js code associated with interacting with them.
-```
-
-The purpose of sample is to provide users a starting point when having to set up API analytics. 
+Purpose of sample 
+----------------
