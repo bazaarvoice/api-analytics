@@ -1,12 +1,12 @@
 /*GLOBAL VARS
 */
 
-var clientId = 'testClient',
+var clientId = 'apiTestCustomer',
     env = 'staging',
     displayCode = '',
     name = '',
     brand = '',
-    productId = '',
+    productId = 'test',
     categoryId = '',
     rootCategoryId ='',
     numReviews = 1,
