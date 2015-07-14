@@ -20,6 +20,7 @@ Purpose of sample
 ----------------
 
 This sample is used show clients using the Bazzarvoice API solition how to implement the required API analytics. The following API calls are supported as part of the sample: 
+
 1. Page View - product page
 2. Featured Used - consumer generated content
 3. Feature Used in View - consumer generated content
