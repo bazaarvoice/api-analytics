@@ -14,7 +14,7 @@ How to Use:
 2. Host the code on a server (e.g. MAMP, NodeJs).
 3. Interact with the code - open in mock Product Details page (index.html) as well as the conversion page in a browser with the developer console open. Watch the diffent console logging occur. 
 4. Investigate the js files associated the different HTML pages.
-5. Enable the [Bazzarvoice Analytics Inspector Chrome extension](https://github.com/bazaarvoice/magpie-inspector/) ![alt tag](/images/inspector_icon.png) and see the analytics data that is being collected. 
+5. Enable the [Bazzarvoice Analytics Inspector Chrome extension](https://github.com/bazaarvoice/magpie-inspector/) ![](/images/inspector_icon.png) and see the analytics data that is being collected. 
 
 
 Purpose of sample 
