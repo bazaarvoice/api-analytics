@@ -1,7 +1,7 @@
 /*GLOBAL VARS
 */
 
-var clientId = 'apiTestCustomer',
+var clientId = 'conversationsapisandbox',
     env = 'staging',
     displayCode = '',
     name = '',
