@@ -35,6 +35,7 @@ $( document ).ready(function() {
     
     //fire off Page View Product
      _bvapiq.push(['PageViewProduct', {
+        bvProduct: 'RatingsAndReviews',
         clientID: clientId,
         environment: env,
         dc: displayCode,
