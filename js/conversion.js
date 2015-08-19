@@ -1,9 +1,9 @@
 $( document ).ready(function() {
 
     var TransactionData = {
-        clientID: 'conversationsapisandbox',
+        clientID: 'ts-sandbox',
         environment: 'staging',
-        dc: '18152',
+        dc: '19301',
         // host: "bazaarvoice.com",
         orderId: '4601555774216',
         city: 'Springfield',

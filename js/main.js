@@ -1,9 +1,9 @@
 /*GLOBAL VARS
 */
 
-var clientId = 'conversationsapisandbox',
+var clientId = 'ts-sandbox',
     env = 'staging',
-    displayCode = '',
+    displayCode = '19301',
     name = '',
     brand = '',
     productId = 'test',

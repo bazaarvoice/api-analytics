@@ -9,7 +9,7 @@ $( document ).ready(function() {
             inviewTime: 5000,
             containerId: 'CGC_Container'
         },
-        dc: "custom_DC",
+        dc: "19301",
         productId: '1234567-bunnyhat',
         brand: 'Test Brand',
         categoryId: 'hats',
