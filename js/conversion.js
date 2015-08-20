@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
     var TransactionData = {
         clientID: 'ts-sandbox',
-        environment: 'staging',
+        environment: 'prod',
         dc: '19301',
         // host: "bazaarvoice.com",
         orderId: '4601555774216',

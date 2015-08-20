@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
     var InViewData = {
         clientID: 'testClient',
-        environment: 'staging',
+        environment: 'prod',
         bvAttributes: {
             minVisiblePixels: 100,
             debouncePeriodMs: 250,

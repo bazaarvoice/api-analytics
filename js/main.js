@@ -2,11 +2,11 @@
 */
 
 var clientId = 'ts-sandbox',
-    env = 'staging',
+    env = 'prod',
     displayCode = '19301',
     name = '',
     brand = '',
-    productId = 'test',
+    productId = 'theme-3',
     categoryId = '',
     rootCategoryId ='',
     numReviews = 1,
