@@ -4,19 +4,34 @@ Bazaarvoice API Analytics starter kit
 Bazaarvoice API Analytics is a sample that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
 
 Before Using:
-----------------
-Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as what is required. Documenation includes the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).  NOTE: The code here is meant as a sample and by no means is optimized for speed and scale. The code is provided as a means to help API users better understand API analytics. 
+-------------
+Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Documentation includes the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).  NOTE: The code here is meant as a sample and by no means is optimized for speed and scale. The code is provided as a means to help API users better understand API analytics. 
 
 Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team. 
+
+Hosted Sample:
+---------------
+Open the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the Developer console open. Several messages will be displayed in the console.  
+
+This is determined by the 'environment' variable.  
+- 'environment: staging' - displays the logs, but does not populate the Conversion Impact Report.
+- 'environment: prod' - supresses logging and captures data.
+
+What is the sample doing:
+-------------------------
+
+
+
 
 How to Use:
 ----------------
 
 1. Download the code.
-2. Host the code on a server (e.g. MAMP, NodeJs). You will need to modify the host file so that application is accesible other than localhost.
-3. Interact with the code - open the mock Product Details page (index.html) as well as the conversion page (conversion.html) in a browser with the developer console open. Watch the diffent console logging occur. The various messages alert the user if the call passed as well as if parameters are missing. 
-4. Investigate the js files associated the different HTML pages.  This is just the sample implementation. You may accomplish the end result in a variety of different ways. 
-5. Enable the [Bazzarvoice Analytics Inspector Chrome extension](https://github.com/bazaarvoice/magpie-inspector/) 
+2. Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team. 
+3. Host the code on a server (e.g. MAMP). You will need to modify the host file so that application is accesible other than localhost.
+4. Interact with the code - open the mock Product Details page (index.html) as well as the conversion page (conversion.html) in a browser with the developer console open. Watch the diffent console logging occur. The various messages alert the user if the call passed as well as if parameters are missing. 
+5. Investigate the js files associated the different HTML pages.  This is just the sample implementation. You may accomplish the end result in a variety of different ways. 
+6. Enable the [Bazzarvoice Analytics Inspector Chrome extension](https://github.com/bazaarvoice/magpie-inspector/) 
 ![](/images/inspector_icon.png). See the analytics data that is being collected. Again, various messages alert the user if the call passed as well as if parameters are missing. 
 
 Purpose of sample 

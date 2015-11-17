@@ -1,8 +1,6 @@
-/*GLOBAL VARS
-*/
-
+/*GLOBAL VARS*/
 var clientId = 'ts-sandbox',
-    env = 'prod',
+    env = 'staging',
     displayCode = '19301',
     name = '',
     brand = '',
@@ -14,25 +12,21 @@ var clientId = 'ts-sandbox',
     numAnswers = 0,
     avgRating = 5.0,
     percentRecommended = 100;
+/*END GLOBAL VARS*/
 
-
-var featureObject={
-    clientID: clientId,
-    environment: env,
-    dc: displayCode,
-    name: '',
-    brand: '',
-    productId: '',
-    categoryId: '',
-    detail1: '',
-    detail2: ''
-};
-
-
-
+var featureObject= {
+        clientID: clientId,
+        environment: env,
+        dc: displayCode,
+        name: '',
+        brand: '',
+        productId: '',
+        categoryId: '',
+        detail1: '',
+        detail2: ''
+    };
 
 $( document ).ready(function() {
-    
     //fire off Page View Product
      _bvapiq.push(['PageViewProduct', {
         bvProduct: 'RatingsAndReviews',
@@ -113,14 +107,11 @@ $( document ).ready(function() {
         });
 
     // read more
-    // $( ".js-ellipsis-read-more.ellipsis-read-more a" ).click(function() {
     $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function(e) {
         e.preventDefault();
         // start some css trickery
-        // $('.ellipsis-content.module').css("max-height", "360px");
         $( ".ellipsis-read-more a" ).text('Read Less');
         $( ".ellipsis-content.module" ).toggleClass('expanded');
-        // $( ".js-ellipsis-read-more" ).addClass('ellipsis-read-less');
         // end css trickery
 
         // readLessClick($(this));
