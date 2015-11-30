@@ -26,58 +26,58 @@ What is the sample doing:
 The javascript on the product description page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities for each analytics call:
 
 
-##### PAGE VIEW PRODUCT
+##### (Page View Product)[https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product]
 
 | Key  | Priority | 
 | :------------ |---------------:|
-| *clientId*              | 'required'      |
-| *env*                   | 'recommended'   |
-| *displayCode*           | 'required'      |
-| *name*                  | 'recommended'   |
-| *brand*                 | 'recommended'   |
-| *productId*             | 'required'      |
-| *categoryId*            | 'recommended'   |
-| *rootCategoryId*        | 'recommended'   |
-| *numReviews*            | 'optional'      |
-| *numQuestions*          | 'optional'      |
-| *avgRating*             | 'recommended'   |
-| *percentRecommended*    | 'optional'      |
+| *clientId*              | `required`      |
+| *env*                   | `recommended`   |
+| *displayCode*           | `required`      |
+| *name*                  | `recommended`   |
+| *brand*                 | `recommended`   |
+| *productId*             | `required`      |
+| *categoryId*            | `recommended`   |
+| *rootCategoryId*        | `recommended`   |
+| *numReviews*            | `optional`      |
+| *numQuestions*          | `optional`      |
+| *avgRating*             | `recommended`   |
+| *percentRecommended*    | `optional`      |
 
 
 ##### FEATURE USED IN VIEW
 
 | Key  | Priority | 
 | :------------ |---------------:|
-| *clientId*              | 'required'      |
-| *env*                   | 'recommended'   |
-| *displayCode*           | 'required'      |
-| *name*                  | 'recommended'   |
-| *brand*                 | 'recommended'   |
-| *productId*             | 'required'      |
-| *categoryId*            | 'recommended'   |
-| *rootCategoryId*        | 'recommended'   |
-| *numReviews*            | 'optional'      |
-| *numQuestions*          | 'optional'      |
-| *avgRating*             | 'recommended'   |
-| *percentRecommended*    | 'optional'      |
+| *clientId*              | `required`      |
+| *env*                   | `recommended`   |
+| *displayCode*           | `required`      |
+| *name*                  | `recommended`   |
+| *brand*                 | `recommended`   |
+| *productId*             | `required`      |
+| *categoryId*            | `recommended`   |
+| *rootCategoryId*        | `recommended`   |
+| *numReviews*            | `optional`      |
+| *numQuestions*          | `optional`      |
+| *avgRating*             | `recommended`   |
+| *percentRecommended*    | `optional`      |
 
 
 ##### FEATURE USED
 
 | Key  | Priority | 
 | :------------ |---------------:|
-| *clientId*              | 'required'      |
-| *env*                   | 'recommended'   |
-| *displayCode*           | 'required'      |
-| *name*                  | 'recommended'   |
-| *brand*                 | 'recommended'   |
-| *productId*             | 'required'      |
-| *categoryId*            | 'recommended'   |
-| *rootCategoryId*        | 'recommended'   |
-| *numReviews*            | 'optional'      |
-| *numQuestions*          | 'optional'      |
-| *avgRating*             | 'recommended'   |
-| *percentRecommended*    | 'optional'      |
+| *clientId*              | `required`      |
+| *env*                   | `recommended`   |
+| *displayCode*           | `required`      |
+| *name*                  | `recommended`   |
+| *brand*                 | `recommended`   |
+| *productId*             | `required`      |
+| *categoryId*            | `recommended`   |
+| *rootCategoryId*        | `recommended`   |
+| *numReviews*            | `optional`      |
+| *numQuestions*          | `optional`      |
+| *avgRating*             | `recommended`   |
+| *percentRecommended*    | `optional`      |
 
 
 How to Use:
