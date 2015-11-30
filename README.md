@@ -12,19 +12,20 @@ Before Using:
 
 Hosted Sample:
 ---------------
-Open the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the Developer console open. Interact with the page, scroll to have different content in view and interact with different controls. This will cause several messages to appear in the console. JQuery event handlers are attached to several HTML inputs which in-turn queue the analytics code.
+Open the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the developer extension open to the Console.  Interact with the page by scrolling and clicking different HTML inputs. Notice the messages to appear in the console. These messages indicate the diffent API Analytics tags that are executing.  Event handlers are attached to several HTML inputs which in-turn queue the analytics code.
 
-Also available from the hosted sample is a [conversion event](https://s3.amazonaws.com/api-analytics/conversion.html) page. The analytics on this page are executed on page load. There are several options available for defining and capturing conversion events. Conversion is described in detail in the [conversion analytics tags](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-analytics-tags) section. 
+Also available within the hosted site is a sample [conversion](https://s3.amazonaws.com/api-analytics/conversion.html) page. Again open the page in a browser with the developer extension open to the Console. The analytics on this page are executed on page load. There are several options available for defining and capturing conversion events. Conversion is described in detail in the [conversion analytics tags](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-analytics-tags) section. 
+<img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11485660/24a5b532-977a-11e5-8403-f44b5529efb4.jpg">
+
 
 Console logs are captured becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
-
 <img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11480794/149d1d44-975f-11e5-91a2-0a5cdea59c23.png">
 
 What is the sample doing:
 -------------------------
 ## Sample Product Details Page
 
-The javascript on the [sample product description page](https://s3.amazonaws.com/api-analytics/index.html) listens for different events.
+The javascript on the [sample product description page](https://s3.amazonaws.com/api-analytics/index.html) listens for different events. The API Analytics code executes when different events occur.
 
 #### [Page View Product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)
 
