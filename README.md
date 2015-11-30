@@ -26,7 +26,7 @@ What is the sample doing:
 The javascript on the product description page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities for each analytics call:
 
 
-##### (Page View Product)[https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product]
+(#####Page View Product)[https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product]
 
 | Key  | Priority | 
 | :------------ |---------------:|
