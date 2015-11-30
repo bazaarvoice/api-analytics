@@ -1,17 +1,14 @@
 Bazaarvoice API Analytics starter kit
 ================
 
-The Bazaarvoice API Analytics starter kit is a static sample consisting of HTML, CSS, and js that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
+The Bazaarvoice API Analytics starter kit is a sample consisting of static HTML, CSS, and js that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
 
 Before Using:
 -------------
-Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Documentation includes the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).  
-
-Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team.
-
-Also make sure that you have included the domain enabled to accept 3rd party cookies. This is also something the Bazaarvoice engineering team can assist with. 
-
-The starter kit is meant as a sample. It is static and by no means optimized for speed and scale. There are no calls made to the API to get product data.  The code is provided as a means to help API users better understand API analytics. 
+1. Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Developers should also be familiar with the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).
+2. Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team.
+3. Also make sure that you have included the domain enabled to accept 3rd party cookies. This is also something the Bazaarvoice engineering team can assist with. 
+4. Realize the starter kit is meant as a sample. It is static and by no means optimized for speed and scale. There are no calls made to the API to get product data.  The code is provided as a means to help API users better understand API analytics. 
 
 Hosted Sample:
 ---------------
