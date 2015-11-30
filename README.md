@@ -13,15 +13,32 @@ Also make sure that you have included the domain enabled to accept 3rd party coo
 
 Hosted Sample:
 ---------------
-Open the product description page (PDP) [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the Developer console open. Interact with the page, scroll to have different content in view and interact with different controls. This will cause several messages to appear in the console. JQuery event handlers are attached to several HTML inputs which in-turn queue the analytics code.  
+Open the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the Developer console open. Interact with the page, scroll to have different content in view and interact with different controls. This will cause several messages to appear in the console. JQuery event handlers are attached to several HTML inputs which in-turn queue the analytics code.
+
+In addition to the product description page, a page representing a [conversion event](https://s3.amazonaws.com/api-analytics/conversion.html) is also hosted. The analytics on this page is execute on the page load. There are several different conversion events that can be used. They are described in the [API analytics tutorial](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics). 
 
 Console logging is possible to view becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
 
-<img width=40% alt="console log" src="https://cloud.githubusercontent.com/assets/2584258/11480794/149d1d44-975f-11e5-91a2-0a5cdea59c23.png">
+<img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11480794/149d1d44-975f-11e5-91a2-0a5cdea59c23.png">
 
 What is the sample doing:
 -------------------------
-The tutorial is a collection of javascript and HTML as well as some CSS and creative assets. The javascript on the page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. 
+The javascript on the product description page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities:
+
+| Key  | Priority  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| clientId              | Required      | $1600 |
+| env                   | Recommended   |   $12 |
+| displayCode           | Required      |    $1 | 
+| name                  | Recommended   |    $1 | 
+| brand                 | Recommended   |    $1 | 
+| productId             | Required      |    $1 | 
+| categoryId            | Recommended   |    $1 | 
+| rootCategoryId        | Recommended   |    $1 | 
+| numReviews            | Optional      |    $1 | 
+| numQuestions          | Optional      |    $1 | 
+| avgRating             | Recommended   |    $1 | 
+| percentRecommended    | Optional      |    $1 | 
 
 
 How to Use:
