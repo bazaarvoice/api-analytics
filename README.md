@@ -1,26 +1,27 @@
 Bazaarvoice API Analytics starter kit
 ================
 
-Bazaarvoice API Analytics is a sample that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
+Bazaarvoice API Analytics is a static sample of HTML, CSS, and js that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
 
 Before Using:
 -------------
-Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Documentation includes the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).  NOTE: The code here is meant as a sample and by no means is optimized for speed and scale. The code is provided as a means to help API users better understand API analytics. 
+Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Documentation includes the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).  NOTE: The code here is meant as a sample. It is static and by no means optimized for speed and scale. Furthermore there are no calls made to the API to get product data.  The code is provided as a means to help API users better understand API analytics. 
 
-Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team. 
+Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team.
+
+Also make sure that you have included the domain enabled to accept 3rd party cookies. This is also something the Bazaarvoice engineering team can assist with. 
 
 Hosted Sample:
 ---------------
-Open the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the Developer console open. Several messages will be displayed in the console.  
+Open the product description page (PDP) [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the Developer console open. Interact with the page, scroll to have different content in view and interact with different controls. This will cause several messages to appear in the console. JQuery event handlers are attached to several HTML inputs which in-turn queue the analytics code.  
 
-This is determined by the 'environment' variable.  
-- 'environment: staging' - displays the logs, but does not populate the Conversion Impact Report.
-- 'environment: prod' - supresses logging and captures data.
+Console logging is possible to view becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
+
+<img width=40% alt="console log" src="https://cloud.githubusercontent.com/assets/2584258/11480794/149d1d44-975f-11e5-91a2-0a5cdea59c23.png">
 
 What is the sample doing:
 -------------------------
-
-
+The tutorial is a collection of javascript and HTML as well as some CSS and creative assets. The javascript on the page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. 
 
 
 How to Use:
