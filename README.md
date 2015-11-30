@@ -23,22 +23,61 @@ Console logging is possible to view becuase within the [hosted API Analytics sol
 
 What is the sample doing:
 -------------------------
-The javascript on the product description page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities:
+The javascript on the product description page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities for each analytics call:
+
+
+##### PAGE VIEW PRODUCT
 
 | Key  | Priority | 
 | :------------ |---------------:|
-| clientId              | Required      |
-| env                   | Recommended   |
-| displayCode           | Required      |
-| name                  | Recommended   |
-| brand                 | Recommended   |
-| productId             | Required      |
-| categoryId            | Recommended   |
-| rootCategoryId        | Recommended   |
-| numReviews            | Optional      |
-| numQuestions          | Optional      |
-| avgRating             | Recommended   |
-| percentRecommended    | Optional      |
+| *clientId*              | 'required'      |
+| *env*                   | 'recommended'   |
+| *displayCode*           | 'required'      |
+| *name*                  | 'recommended'   |
+| *brand*                 | 'recommended'   |
+| *productId*             | 'required'      |
+| *categoryId*            | 'recommended'   |
+| *rootCategoryId*        | 'recommended'   |
+| *numReviews*            | 'optional'      |
+| *numQuestions*          | 'optional'      |
+| *avgRating*             | 'recommended'   |
+| *percentRecommended*    | 'optional'      |
+
+
+##### FEATURE USED IN VIEW
+
+| Key  | Priority | 
+| :------------ |---------------:|
+| *clientId*              | 'required'      |
+| *env*                   | 'recommended'   |
+| *displayCode*           | 'required'      |
+| *name*                  | 'recommended'   |
+| *brand*                 | 'recommended'   |
+| *productId*             | 'required'      |
+| *categoryId*            | 'recommended'   |
+| *rootCategoryId*        | 'recommended'   |
+| *numReviews*            | 'optional'      |
+| *numQuestions*          | 'optional'      |
+| *avgRating*             | 'recommended'   |
+| *percentRecommended*    | 'optional'      |
+
+
+##### FEATURE USED
+
+| Key  | Priority | 
+| :------------ |---------------:|
+| *clientId*              | 'required'      |
+| *env*                   | 'recommended'   |
+| *displayCode*           | 'required'      |
+| *name*                  | 'recommended'   |
+| *brand*                 | 'recommended'   |
+| *productId*             | 'required'      |
+| *categoryId*            | 'recommended'   |
+| *rootCategoryId*        | 'recommended'   |
+| *numReviews*            | 'optional'      |
+| *numQuestions*          | 'optional'      |
+| *avgRating*             | 'recommended'   |
+| *percentRecommended*    | 'optional'      |
 
 
 How to Use:
