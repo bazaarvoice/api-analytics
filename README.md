@@ -1,32 +1,37 @@
 Bazaarvoice API Analytics starter kit
 ================
 
-Bazaarvoice API Analytics is a static sample of HTML, CSS, and js that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
+The Bazaarvoice API Analytics starter kit is a static sample consisting of HTML, CSS, and js that demonstrates how API users should implement the required analytics tags when using the Bazaarvoice API. 
 
 Before Using:
 -------------
-Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Documentation includes the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).  NOTE: The code here is meant as a sample. It is static and by no means optimized for speed and scale. Furthermore there are no calls made to the API to get product data.  The code is provided as a means to help API users better understand API analytics. 
+Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Documentation includes the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).  
 
 Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team.
 
 Also make sure that you have included the domain enabled to accept 3rd party cookies. This is also something the Bazaarvoice engineering team can assist with. 
 
+The starter kit is meant as a sample. It is static and by no means optimized for speed and scale. There are no calls made to the API to get product data.  The code is provided as a means to help API users better understand API analytics. 
+
 Hosted Sample:
 ---------------
 Open the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the Developer console open. Interact with the page, scroll to have different content in view and interact with different controls. This will cause several messages to appear in the console. JQuery event handlers are attached to several HTML inputs which in-turn queue the analytics code.
 
-In addition to the product description page, a page representing a [conversion event](https://s3.amazonaws.com/api-analytics/conversion.html) is also hosted. The analytics on this page is execute on the page load. There are several different conversion events that can be used. They are described in the [API analytics tutorial](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics). 
+Also available from the hosted sample is a [conversion event](https://s3.amazonaws.com/api-analytics/conversion.html) page. The analytics on this page are executed on page load. There are several options available for defining and capturing conversion events. Conversion is described in detail in the [conversion analytics tags](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-analytics-tags) section. 
 
-Console logging is possible to view becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
+Console logs are captured becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
 
 <img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11480794/149d1d44-975f-11e5-91a2-0a5cdea59c23.png">
 
 What is the sample doing:
 -------------------------
-The javascript on the product description page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities for each analytics call:
+## Sample Product Details Page
 
+The javascript on the [sample product description page](https://s3.amazonaws.com/api-analytics/index.html) listens for different events.
 
 #### [Page View Product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)
+
+It is required that the API Analytics capture all [product details page views](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product). In this sample, the [API call](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53) fires on page load and passes an object. In this sample, the analytics code is execute using jQuery's document.ready(function). The key/values pairs and their priorities are documented below in the table.
 
 | Key  | Priority | 
 | :------------ |---------------:|
@@ -44,12 +49,19 @@ The javascript on the product description page simply listens for different even
 | *percentRecommended*    | `optional`      |
 ___
 
+
+Not all Product details pages have Consumer Generated Content (CGC) within the browser's viewable area when the page is rendered.  Often users must scroll to get to view the CGC. As part of the API Analytics requirements, this event (CGC in view) must also be captured. 
+
+
+users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities for each analytics call:
+
+
 #### [Feature Used in View](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
 
 | Key  | Priority | 
 | :------------ |---------------:|
-| *clientId*              | `required`      |
-| *env*                   | `recommended`   |
+| *clientID*              | `required`      |
+| *environment*           | `recommended`   |
 | *displayCode*           | `required`      |
 | *name*                  | `recommended`   |
 | *brand*                 | `recommended`   |
@@ -66,18 +78,20 @@ ___
 
 | Key  | Priority | 
 | :------------ |---------------:|
-| *clientId*              | `required`      |
-| *env*                   | `recommended`   |
+| *clientID*              | `required`      |
+| *environment*           | `recommended`   |
 | *displayCode*           | `required`      |
-| *name*                  | `recommended`   |
 | *brand*                 | `recommended`   |
 | *productId*             | `required`      |
 | *categoryId*            | `recommended`   |
 | *rootCategoryId*        | `recommended`   |
-| *numReviews*            | `optional`      |
-| *numQuestions*          | `optional`      |
-| *avgRating*             | `recommended`   |
-| *percentRecommended*    | `optional`      |
+
+
+| *minVisiblePixels*        | `optional`   |
+| *debouncePeriodMs*        | `optional`   |
+| *inviewTime*              | `optional`   |
+| *containerId*        | `required`   |
+            
 ___
 
 How to Use:
