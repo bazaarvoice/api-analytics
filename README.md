@@ -25,20 +25,20 @@ What is the sample doing:
 -------------------------
 The javascript on the product description page simply listens for different events when users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities:
 
-| Key  | Priority  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| clientId              | Required      | $1600 |
-| env                   | Recommended   |   $12 |
-| displayCode           | Required      |    $1 | 
-| name                  | Recommended   |    $1 | 
-| brand                 | Recommended   |    $1 | 
-| productId             | Required      |    $1 | 
-| categoryId            | Recommended   |    $1 | 
-| rootCategoryId        | Recommended   |    $1 | 
-| numReviews            | Optional      |    $1 | 
-| numQuestions          | Optional      |    $1 | 
-| avgRating             | Recommended   |    $1 | 
-| percentRecommended    | Optional      |    $1 | 
+| Key  | Priority | 
+| :------------ |---------------:|
+| clientId              | Required      |
+| env                   | Recommended   |
+| displayCode           | Required      |
+| name                  | Recommended   |
+| brand                 | Recommended   |
+| productId             | Required      |
+| categoryId            | Recommended   |
+| rootCategoryId        | Recommended   |
+| numReviews            | Optional      |
+| numQuestions          | Optional      |
+| avgRating             | Recommended   |
+| percentRecommended    | Optional      |
 
 
 How to Use:
