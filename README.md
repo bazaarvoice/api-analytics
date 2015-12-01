@@ -5,33 +5,35 @@ The Bazaarvoice API Analytics starter kit is a sample consisting of static HTML,
 
 Before Using:
 -------------
-1. Read the documentation on the [Bazaarvoice Developer Portal](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Developers should also be familiar with the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).
-2. Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team.
-3. Also make sure that you have included the domain enabled to accept 3rd party cookies. This is also something the Bazaarvoice engineering team can assist with. 
-4. Realize the starter kit is meant as a sample. It is static and by no means optimized for speed and scale. There are no calls made to the API to get product data.  The code is provided as a means to help API users better understand API analytics. 
+1. Read the documentation on the [API Analytics tutorial](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Developers should also be familiar with the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).
+2. Visit the hosted sample pages. Both the [product description page](https://s3.amazonaws.com/api-analytics/index.html) and the [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) samples can be considered working samples of the API analytics.
+3. Realize that the starter kit is meant as a sample. It is static and by no means optimized for speed and scale. There are no calls made to the Conversations API to get product data. The key/value are hard coded in the js file. The code is provided as a means to help API users better understand API analytics.
 
 Hosted Sample:
 ---------------
-Open the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the developer extension open to the Console.  Interact with the page by scrolling and clicking different HTML inputs. Notice the messages to appear in the console. These messages indicate the diffent API Analytics tags that are executing.  Event handlers are attached to several HTML inputs which in-turn queue the analytics code.
+In addtion to providing the starter kit for download, the tutorial is hosted for client interaction.
+
+Open the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the developer extension open to the Console.  Interact with the page by scrolling and clicking different HTML inputs. Notice the messages to appear in the Console. These messages indicate the diffent API Analytics tags that are executing.  Event handlers are attached to several HTML inputs which in-turn queue the analytics code.
+
+<img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11480794/149d1d44-975f-11e5-91a2-0a5cdea59c23.png">
 
 Also available within the hosted site is a sample [conversion](https://s3.amazonaws.com/api-analytics/conversion.html) page. Again open the page in a browser with the developer extension open to the Console. The analytics on this page are executed on page load. There are several options available for defining and capturing conversion events. Conversion is described in detail in the [conversion analytics tags](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-analytics-tags) section. 
 
 <img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11485660/24a5b532-977a-11e5-8403-f44b5529efb4.jpg">
 
-
-Console logs are captured becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
-
-<img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11480794/149d1d44-975f-11e5-91a2-0a5cdea59c23.png">
+Console logs are displayed becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
 
 What is the sample doing:
 -------------------------
-## Sample Product Details Page
+#### Sample Product Details Page
 
-The javascript on the [sample product description page](https://s3.amazonaws.com/api-analytics/index.html) listens for different events. The API Analytics code executes when different events occur.
+The javascript on the [sample product description page](https://s3.amazonaws.com/api-analytics/index.html) listens for different events. The API Analytics code executes when they occur.
 
-#### [Page View Product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)
+##### [Page View Product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)
 
-It is required that the API Analytics capture all [product details page views](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product). In this sample, the [API call](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53) fires on page load and passes an object. In this sample, the analytics code is execute using jQuery's document.ready(function). The key/values pairs and their priorities are documented below in the table.
+Each time a products detail page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
+
+The following table details the object keys and associated ordinality.
 
 | Key  | Priority | 
 | :------------ |---------------:|
@@ -50,31 +52,29 @@ It is required that the API Analytics capture all [product details page views](h
 ___
 
 
-Not all Product details pages have Consumer Generated Content (CGC) within the browser's viewable area when the page is rendered.  Often users must scroll to get to view the CGC. As part of the API Analytics requirements, this event (CGC in view) must also be captured. 
+##### [Feature Used in View](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
 
-
-users view and/or interact with the Bazaarvoice data.  For the events that are captured, several parameters around the events and inputs are acquired and queued up to be send back to Bazaarvoice. The following lists the different keys and value priorities for each analytics call:
-
-
-#### [Feature Used in View](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
+Not all Product details pages have Consumer Generated Content (CGC) within the browser's viewable area when the page is rendered.  Often, users must scroll to view the CGC. As part of the API Analytics requirements, when CGC comes in view, must also be captured. When the [feature used in view](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L46) call is made. 
 
 | Key  | Priority | 
 | :------------ |---------------:|
 | *clientID*              | `required`      |
 | *environment*           | `recommended`   |
 | *displayCode*           | `required`      |
-| *name*                  | `recommended`   |
 | *brand*                 | `recommended`   |
 | *productId*             | `required`      |
 | *categoryId*            | `recommended`   |
 | *rootCategoryId*        | `recommended`   |
-| *numReviews*            | `optional`      |
-| *numQuestions*          | `optional`      |
-| *avgRating*             | `recommended`   |
-| *percentRecommended*    | `optional`      |
+
+
+| *minVisiblePixels*        | `optional`   |
+| *debouncePeriodMs*        | `optional`   |
+| *inviewTime*              | `optional`   |
+| *containerId*        | `required`   |
+            
 ___
 
-#### [Feature Used](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
+##### [Feature Used](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
 
 | Key  | Priority | 
 | :------------ |---------------:|
@@ -96,6 +96,9 @@ ___
 
 How to Use:
 ----------------
+
+2. Make sure the ROI beacon is enabled. This is accomplished with the help of your Bazaarvoice engineering team.
+3. Make sure that you have included the domain enabled to accept 3rd party cookies. This is also something the Bazaarvoice engineering team can assist with. 
 
 1. Download the code.
 2. Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team. 
