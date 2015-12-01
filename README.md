@@ -6,13 +6,19 @@ The Bazaarvoice API Analytics starter kit is a sample consisting of static HTML,
 Before Downloading:
 -------------
 1. Read the documentation on the [API Analytics tutorial](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Developers should also be familiar with the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).
-2. Download and install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related)
-3. Visit the [hosted sample pages](https://github.com/bazaarvoice/api-analytics/blob/master/README.md#hosted-sample). Both the [product description page](https://s3.amazonaws.com/api-analytics/index.html) and the [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) samples can be considered working samples of the API analytics.
+2. Download and install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related).
+3. Visit the [hosted sample pages](https://github.com/bazaarvoice/api-analytics/blob/master/README.md#hosted-sample). Both the [product description page](https://s3.amazonaws.com/api-analytics/index.html) and the [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) can be considered working samples of the API Analytics starter kit.
 4. Realize that the starter kit is meant as a sample. It is static and by no means optimized for speed and scale. There are no calls made to the Conversations API to get product data. The key/value are hard coded in the js file. The code is provided as a means to help API users better understand API analytics.
 
 Hosted Sample:
 ---------------
-In addtion to providing the starter kit for download, the tutorial is hosted for client interaction.
+In addition to providing the starter kit for download, the tutorial is hosted for client interaction.
+
+Download and install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related).  Once install you will see the Anayltics Inspector icon in the browser. 
+
+<img width=30% alt="Bazaarvoice Analytics Inspector browser extenstion" src="https://cloud.githubusercontent.com/assets/2584258/11514761/c7948e42-983f-11e5-8b90-a3f724da7475.jpg">
+
+
 
 Open the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) with the developer extension open to the Console.  Interact with the page by scrolling and clicking different HTML inputs. Notice the messages to appear in the Console. These messages indicate the diffent API Analytics tags that are executing.  Event handlers are attached to several HTML inputs which in-turn queue the analytics code.
 
