@@ -31,7 +31,7 @@ The javascript on the [sample product description page](https://s3.amazonaws.com
 
 ##### [Page View Product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)
 
-Each time a products detail page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
+Each time a products detail page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete, the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
 
 The following table details the object keys and associated ordinality.
 
@@ -54,7 +54,11 @@ ___
 
 ##### [Feature Used in View](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
 
-Not all Product details pages have Consumer Generated Content (CGC) within the browser's viewable area when the page is rendered.  Often, users must scroll to view the CGC. As part of the API Analytics requirements, when CGC comes in view, must also be captured. When the [feature used in view](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L46) call is made. 
+Not all Product Details Pages have Consumer Generated Content (CGC) within the browser's viewable area when the page is rendered.  Often, users must scroll to view the CGC. As part of the API Analytics requirements, when the CGC comes in view, must also be captured. This is done by calling the transactional analytics tag '[feature used in view](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L46)'.  This object's key/value pairs differs slightly from the previous 'page view product' by: 
+1. having additional keys that identify the CGC container Id 
+2. allow to specify the minimum pixel height that must be viewed before executing
+3. specifying a time (milliseconds) the CGC container must be viewed before executing 
+
 
 | Key  | Priority | 
 | :------------ |---------------:|
@@ -66,16 +70,30 @@ Not all Product details pages have Consumer Generated Content (CGC) within the b
 | *categoryId*            | `recommended`   |
 | *rootCategoryId*        | `recommended`   |
 
-
-| *minVisiblePixels*        | `optional`   |
-| *debouncePeriodMs*        | `optional`   |
-| *inviewTime*              | `optional`   |
-| *containerId*        | `required`   |
+| *minVisiblePixels*    | `optional` |
+| *debouncePeriodMs*    | `optional` |
+| *inviewTime*          | `optional` |
+| *containerId*         | `required` |
             
 ___
 
 ##### [Feature Used](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
 
+Event handlers are also attached to the various CGC inputs. This aims to capture how users interact with the Conversations data. In order to complete this 
+
+Included in the sample are:
+1. Clicking "Show/Hide Filter"
+2. Selecting an Age or Gender sub-filter
+3. Clicking "Write a Review" 
+4. Interacting with the "Sort"
+5. Expanding/contracting the "Read more/less"
+6. Voting if the review was helpful
+7. Reporting the review
+8. Clicking the pagination
+9. Clicking the "See All" button
+10. Clicking the "Staff" button
+
+
 | Key  | Priority | 
 | :------------ |---------------:|
 | *clientID*              | `required`      |
@@ -84,43 +102,23 @@ ___
 | *brand*                 | `recommended`   |
 | *productId*             | `required`      |
 | *categoryId*            | `recommended`   |
+| *bvProduct*             | `recommended`   |
 | *rootCategoryId*        | `recommended`   |
-
-
-| *minVisiblePixels*        | `optional`   |
-| *debouncePeriodMs*        | `optional`   |
-| *inviewTime*              | `optional`   |
-| *containerId*        | `required`   |
+| *name*                  | `required`      |
+| *detail1*               | `required`      |
+| *detail2*               | `recommended`   |
             
 ___
 
-How to Use:
-----------------
 
-2. Make sure the ROI beacon is enabled. This is accomplished with the help of your Bazaarvoice engineering team.
-3. Make sure that you have included the domain enabled to accept 3rd party cookies. This is also something the Bazaarvoice engineering team can assist with. 
+#### Converstion Page
 
-1. Download the code.
-2. Make sure the ROI beacon is turned on. This is accomplished with the help of your Bazaarvoice engineering team. 
-3. Host the code on a server (e.g. MAMP). You will need to modify the host file so that application is accesible other than localhost.
-4. Interact with the code - open the mock Product Details page (index.html) as well as the conversion page (conversion.html) in a browser with the developer console open. Watch the diffent console logging occur. The various messages alert the user if the call passed as well as if parameters are missing. 
-5. Investigate the js files associated the different HTML pages.  This is just the sample implementation. You may accomplish the end result in a variety of different ways. 
-6. Enable the [Bazzarvoice Analytics Inspector Chrome extension](https://github.com/bazaarvoice/magpie-inspector/) 
-![](/images/inspector_icon.png). See the analytics data that is being collected. Again, various messages alert the user if the call passed as well as if parameters are missing. 
+The [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) simulates a page a user would reach upon completing a purchase. With conversion complete, the conversion analytic tags are executed. Both the '[ConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' and the '[PIIConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' are called in this sample. 
 
-Purpose of sample 
-----------------
+##### [ConversionTransaction](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-transaction)
 
-This sample is used show clients using the Bazzarvoice API solution how to implement the required API analytics. The following API calls are inlcuded as part of the sample:
+##### [PIIConversionTransaction](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-transaction-with-pii)
 
-1. Page View - product details page
-2. Featured Used - consumer generated content
-3. Feature Used in View - consumer generated content
-4. Conversion - conversion page
-5. Conversion Transaction - conversion page
-6. PIIConversionTransaction - conversion page
-
-Details on the function of each analyics calls are documented on the [Bazaarvoice Developer Portal]().
 
 Things to Note 
 ----------------
