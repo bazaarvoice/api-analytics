@@ -20,17 +20,17 @@ First, download and install the [Bazaarvoice Analytics Inspector for Chrome](htt
 
 Next, visit the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html). Open the [Bazaarvoice Analytics Inspector](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related) and interact with the page. You will notice event being captured in the tool. Scroll and click different HTML inputs. Notice Feature events being populated. Event handlers are attached to several HTML inputs which in-turn queue the analytics code.
 
-<img width=40% alt="" src="https://cloud.githubusercontent.com/assets/2584258/11515432/7e035c6e-9843-11e5-917b-f607973a2297.png">
+<img width=40% alt="product details page, api analytics inspector" src="https://cloud.githubusercontent.com/assets/2584258/11515432/7e035c6e-9843-11e5-917b-f607973a2297.png">
 
 Also available within the hosted site is a sample [conversion](https://s3.amazonaws.com/api-analytics/conversion.html) page. Again open the page in a browser with the [Bazaarvoice Analytics Inspector](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related) open. The analytics on this page are executed on page load. There are several options available for defining and capturing conversion events. Conversion is described in detail in the [conversion analytics tags](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-analytics-tags) section. 
 
-<img width=40% alt="console logging by setting environment variable" src="https://cloud.githubusercontent.com/assets/2584258/11515431/7e01aaa4-9843-11e5-9b76-3ac6934dbc8a.png">
+<img width=40% alt="conversion page, api analytics inspector" src="https://cloud.githubusercontent.com/assets/2584258/11515431/7e01aaa4-9843-11e5-9b76-3ac6934dbc8a.png">
 
 <REMOVE??>
 Console logs are displayed becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
 </REMOVE??>
 
-What is the sample doing:
+What is the sample doing?
 -------------------------
 #### Sample Product Details Page
 
@@ -118,7 +118,7 @@ Included in the sample are:
 ___
 
 
-#### Converstion Page
+#### Conversion Page
 
 The [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) simulates a page a user would reach upon completing a purchase. With conversion complete, the conversion analytic tags are executed. Both the '[ConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' and the '[PIIConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' are called in this sample. 
 
