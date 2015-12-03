@@ -14,7 +14,7 @@ Hosted Sample:
 ---------------
 In addition to providing the starter kit for download, the tutorial is hosted for client interaction.
 
-First, download and install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related).  Once install you will see the Anayltics Inspector icon in the Chrome browser. 
+First, download and install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related).  Once install you will see the Analytics Inspector icon in the Chrome browser. 
 
 <img width=30% alt="Bazaarvoice Analytics Inspector browser extenstion" src="https://cloud.githubusercontent.com/assets/2584258/11514761/c7948e42-983f-11e5-8b90-a3f724da7475.jpg">
 
@@ -27,7 +27,7 @@ Also available within the hosted site is a sample [conversion](https://s3.amazon
 <img width=40% alt="conversion page, api analytics inspector" src="https://cloud.githubusercontent.com/assets/2584258/11515431/7e01aaa4-9843-11e5-9b76-3ac6934dbc8a.png">
 
 <REMOVE??>
-Console logs are displayed becuase within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
+Console logs are displayed because within the [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html) the 'environment' variable is set to ['staging'](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L3). This flag is used in the js code to enable console.logs. When the 'environment' flag is set to anything else (including the other accepted value 'production') logging will not occur. 
 </REMOVE??>
 
 What is the sample doing?
@@ -129,7 +129,7 @@ The [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) si
 
 Things to Note 
 ----------------
-This sample does not make API calls to retreive and bind client data. Values that should be obtained from the API are hard coded in the HTMl and js files. Comments have been added where the values should be obtained from the API. 
+This sample does not make API calls to retrieve and bind client data. Values that should be obtained from the API are hard coded in the HTML and js files. Comments have been added where the values should be obtained from the API. 
 
 The sample works in conjunction with the [Bazzarvoice Analytics Inspector](https://github.com/bazaarvoice/magpie-inspector/) to aid clients in making sure the implementation is complete. 
 
