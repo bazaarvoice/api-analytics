@@ -40,22 +40,6 @@ The javascript on the [sample product description page](https://s3.amazonaws.com
 
 Each time a products detail page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete, the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
 
-The following table details the object keys and associated ordinality.
-
-| Key  | Priority | 
-| :------------ |---------------:|
-| *clientId*              | `required`      |
-| *env*                   | `recommended`   |
-| *displayCode*           | `required`      |
-| *name*                  | `recommended`   |
-| *brand*                 | `recommended`   |
-| *productId*             | `required`      |
-| *categoryId*            | `recommended`   |
-| *rootCategoryId*        | `recommended`   |
-| *numReviews*            | `optional`      |
-| *numQuestions*          | `optional`      |
-| *avgRating*             | `recommended`   |
-| *percentRecommended*    | `optional`      |
 ___
 
 
@@ -66,22 +50,6 @@ Not all Product Details Pages have Consumer Generated Content (CGC) within the b
 2. allow to specify the minimum pixel height that must be viewed before executing
 3. specifying a time (milliseconds) the CGC container must be viewed before executing 
 
-
-| Key  | Priority | 
-| :------------ |---------------:|
-| *clientID*              | `required`      |
-| *environment*           | `recommended`   |
-| *displayCode*           | `required`      |
-| *brand*                 | `recommended`   |
-| *productId*             | `required`      |
-| *categoryId*            | `recommended`   |
-| *rootCategoryId*        | `recommended`   |
-
-| *minVisiblePixels*    | `optional` |
-| *debouncePeriodMs*    | `optional` |
-| *inviewTime*          | `optional` |
-| *containerId*         | `required` |
-            
 ___
 
 ##### [Feature Used](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
@@ -100,21 +68,6 @@ Included in the sample are:
 9. Clicking the "See All" button
 10. Clicking the "Staff" button
 
-
-| Key  | Priority | 
-| :------------ |---------------:|
-| *clientID*              | `required`      |
-| *environment*           | `recommended`   |
-| *displayCode*           | `required`      |
-| *brand*                 | `recommended`   |
-| *productId*             | `required`      |
-| *categoryId*            | `recommended`   |
-| *bvProduct*             | `recommended`   |
-| *rootCategoryId*        | `recommended`   |
-| *name*                  | `required`      |
-| *detail1*               | `required`      |
-| *detail2*               | `recommended`   |
-            
 ___
 
 
