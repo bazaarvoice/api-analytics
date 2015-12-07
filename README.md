@@ -20,7 +20,7 @@ First, download and install the [Bazaarvoice Analytics Inspector for Chrome](htt
 
 Next, visit the product description page [hosted API Analytics solutions](https://s3.amazonaws.com/api-analytics/index.html). Open the [Bazaarvoice Analytics Inspector](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/aepeegmfgianehembekeaamchabhfnng/related) and interact with the page. The tool documents each time an analytic event is captured and send the Bazzarvoice.  Notice the red counter on the icon.
 
-<img width=30% alt="Bazaarvoice Analytics Inspector browser extenstion" src="https://cloud.githubusercontent.com/assets/2584258/11639199/fd88d1e2-9cf0-11e5-8046-8993445f037d.png">
+<img width=30% alt="Bazaarvoice Analytics Inspector browser extenstion" src="https://cloud.githubusercontent.com/assets/2584258/11639298/b2339294-9cf1-11e5-8e5a-2cd59183dd44.jpg">
 
 Scroll and click different HTML inputs. Notice Feature events being populated. Event handlers are attached to several HTML inputs which in-turn queue the analytics code.
 
