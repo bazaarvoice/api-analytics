@@ -21,7 +21,7 @@ After the custom code capturing the different parameters is completed and associ
 The tracking code requires 2 arguments: 
 <ul>
     <li>the tag name</li>
-    <li>an object containing the key/value pairs. <li>
+    <li>an object containing the key/value pairs. </li>
 </ul>
 
 The following samples demonstrate the call:
