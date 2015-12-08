@@ -12,7 +12,7 @@ Before Downloading:
 
 What is the sample doing?
 -------------------------
-This tutorial captures a user's actions on the products detail page and returns to the analytics engine for further investigation. Accompanying the code on the product details page, is code associated with the conversion event. By connecting the user's behavior on the product details page to the conversion page, we can often predict how those more likely to make a purchase behave throught out the site.
+This tutorial captures a user's actions on the products detail page and returns the data to Bazaarvoice for further investigation. Accompanying the code on the product details page, is code associated with the conversion event. Bazaarvoice supports various definitions of conversion, both  non-commercial conversion and traditional e-commerce conversion.  By connecting the user's behavior on the product details page to the conversion page, we can evaluate the likelhood of a customer completing conversion by monitoring their behavior throught out the site.
 
 All this is accomplished by adding code that captures how user's interact with the consumer generated content. User events (e.g. viewing the page, scrolling the page, and interacting with the different web inputs) should all be captured within the site.  Attaching code to these different events is custom coding for the site developer. This is possible through various techniques and languages, its up to your development team determine the best technical solution.
 
@@ -24,7 +24,7 @@ The tracking code requires 2 arguments:
     <li>an object containing the key/value pairs. </li>
 </ul>
 
-The following samples demonstrate the call:
+The following samples demonstrate the various analytic calls:
 ```js
     _bvapiq.push(['FeatureUsedInView', item]);
     _bvapiq.push(['FeatureUsed', {
@@ -44,8 +44,7 @@ The following samples demonstrate the call:
     _bvapiq.push(['PIIConversionTransaction', TransactionData]);
 ```
 
-
-The [bvAnalyticsAPITracker.min.js.gz](https://magpie-static.ugc.bazaarvoice.com/magpie-api/1.4/bvAnalyticsAPITracker.min.js.gz) file send the analytics data to the Bazaarvoice server after collecting from the product details page and the user defined 'conversion' page.
+The [bvAnalyticsAPITracker.min.js.gz](https://magpie-static.ugc.bazaarvoice.com/magpie-api/1.4/bvAnalyticsAPITracker.min.js.gz) file send the analytics data to Bazaarvoice servers after collecting from the product details page and the user defined 'conversion' page.
 
 #### Sample Product Details Page
 
