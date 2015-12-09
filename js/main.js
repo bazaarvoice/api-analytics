@@ -45,7 +45,6 @@ var InViewData = {
 
 $( window ).on('resize, scroll', function(event) {
     featuredUsedInView(InViewData);
-    // _bvapiq.push(['FeatureUsedInView', InViewData]); 
 });
 
 $( document ).ready(function() {
