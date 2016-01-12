@@ -95,6 +95,9 @@ footer{
 .navbar-fixed-bottom .containerz{
         padding: 6px 5px;
         width: 100%;
+        padding: 0 5px;
+}
+
 }
 .navbar-fixed-bottom .containerz:before{}
 .navbar-fixed-bottom .containerz .pull-right{
@@ -107,6 +110,7 @@ footer{
     color: #fff;
     text-decoration: none;
     margin-left: 5px;
+    font-size: 14px;
 }
 .navbar-fixed-bottom .containerz .pull-right a .glyphicon {
     color: #00ab8e;
