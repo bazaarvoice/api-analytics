@@ -63,7 +63,7 @@
                                         </div>
                                     </div>
                                     <div class="product-subhead-section">
-                                        <a class="js-product-anchor" href="#reviews">355 reviews</a> <span class="visuallyhidden">ratings</span>
+                                        <a class="js-product-anchor" href="#reviews">357 reviews</a> <span class="visuallyhidden">ratings</span>
                                     </div>
                                     <div class="product-subhead-section hide-content display-inline-s">
                                         <a class="js-product-anchor" href="#qa" id="WMItemQALnk">Q&amp;A</a>
@@ -137,7 +137,7 @@
                                         </div>
                                         <div class="review-histogram pull-left">
                                             <div class="review-histogram-wrapper">
-                                                <div class="js-rating-filter rating-filter" data-value="rating:eq:5">
+                                                <div class="js-rating-filter rating-filter" data-value="rating:eq:5" bvEventType="filter">
                                                     <div class="meter-inline">
                                                         5 stars
                                                     </div>
@@ -188,11 +188,11 @@
                                                     <div class="chooser-option-current js-chooser-option-current" role="button" tabindex="0" aria-expanded="false">
                                                         Most helpful
                                                     </div>
-                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" tabindex="-1">Most helpful</button>
-                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" tabindex="-1">Newest to oldest</button>
-                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" tabindex="-1">Oldest to newest</button>
-                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" tabindex="-1">High to low rating</button>
-                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" tabindex="-1">Low to high rating</button>
+                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" bvEventType="sort" tabindex="-1">Most helpful</button>
+                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" bvEventType="sort" tabindex="-1">Newest to oldest</button>
+                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" bvEventType="sort" tabindex="-1">Oldest to newest</button>
+                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" bvEventType="sort" tabindex="-1">High to low rating</button>
+                                                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" bvEventType="sort" tabindex="-1">Low to high rating</button>
                                                 </div>
                                             </div><select class="js-selector js-reviews-sort chooser-alt chooser-fixed-width visuallyhidden" tabindex="-1" aria-hidden="true">
                                                 <option selected value="helpful">
@@ -224,7 +224,7 @@
                                 </div>
                             </div>
                             <div class="Grid-col u-size-3-12-m">
-                                <a href="#reviews" class="js-write-review btn pull-right" id="WMItemWriteReviewLnk">Write a review</a>
+                                <a href="#reviews" class="js-write-review btn pull-right" id="WMItemWriteReviewLnk" bvEventType="writeReview" data-value="review">Write a review</a>
                             </div>
                         </div>
                     </div>
@@ -234,16 +234,20 @@
                             <div class="Grid">
                                 <div class="Grid-col u-size-9-12-m review-filter-toggle-container">
                                     <div class="review-filter-toggle">
-                                        <a class="js-expander-toggle more-link" href="#" id="WMItemAgeShowFltrLnk">Show Filters</a>
+                                        <a class="js-expander-toggle more-link" bvEventType="expand-retract" data-value="more" href="#" id="WMItemAgeShowFltrLnk">Show Filters</a>
                                     </div>
                                 </div>
                                 <div class="Grid-col u-size-3-12-m review-sort">
                                     <label class="label font-semibold">Sort by</label>
                                     <div class="chooser js-chooser chooser-fixed-width chooser-alt" style="width: 148px;">
                                         <div class="chooser-option-list rendered">
-                                            <div class="chooser-option-current js-chooser-option-current" role="button" tabindex="0" aria-expanded="false">
+                                            <div class="chooser-option-current js-chooser-option-current" role="button" data-chooser-value="initial" bvEventType="sort" tabindex="0" aria-expanded="false">
                                                 Most helpful
-                                            </div><button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" tabindex="-1">Most helpful</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" tabindex="-1">Newest to oldest</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" tabindex="-1">Oldest to newest</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" tabindex="-1">High to low rating</button><button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" tabindex="-1">Low to high rating</button>
+                                            </div><button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" bvEventType="sort" tabindex="-1">Most helpful</button>
+                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" bvEventType="sort" tabindex="-1">Newest to oldest</button>
+                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" bvEventType="sort" tabindex="-1">Oldest to newest</button>
+                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" bvEventType="sort" tabindex="-1">High to low rating</button>
+                                            <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" bvEventType="sort" tabindex="-1">Low to high rating</button>
                                         </div>
                                     </div><select class="js-selector js-reviews-sort chooser-alt chooser-fixed-width visuallyhidden" tabindex="-1" aria-hidden="true">
                                         <option selected value="helpful">
@@ -274,26 +278,26 @@
                                             <div class="Grid-col u-size-6-12-m">
                                                 <ul class="block-list module">
                                                     <li class="option" data-filter="age:18-24">
-                                                        <input type="checkbox" name="age-1" id="age-1" value="contextdatavalue_age:18-24"> <label for="age-1">18-24</label>
+                                                        <input type="checkbox" bvEventType="filter" name="age-1" id="age-1" value="contextdatavalue_age:18-24"> <label for="age-1">18-24</label>
                                                     </li>
                                                     <li class="option" data-filter="age:25-34">
-                                                        <input type="checkbox" name="age-2" id="age-2" value="contextdatavalue_age:25-34"> <label for="age-2">25-34</label>
+                                                        <input type="checkbox" bvEventType="filter" name="age-2" id="age-2" value="contextdatavalue_age:25-34"> <label for="age-2">25-34</label>
                                                     </li>
                                                     <li class="option" data-filter="age:35-44">
-                                                        <input type="checkbox" name="age-3" id="age-3" value="contextdatavalue_age:35-44"> <label for="age-3">35-44</label>
+                                                        <input type="checkbox" bvEventType="filter" name="age-3" id="age-3" value="contextdatavalue_age:35-44"> <label for="age-3">35-44</label>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="Grid-col u-size-6-12-m">
                                                 <ul class="block-list module">
                                                     <li class="option" data-filter="age:45-54">
-                                                        <input type="checkbox" name="age-4" id="age-4" value="contextdatavalue_age:45-54"> <label for="age-4">45-54</label>
+                                                        <input type="checkbox" bvEventType="filter" name="age-4" id="age-4" value="contextdatavalue_age:45-54"> <label for="age-4">45-54</label>
                                                     </li>
                                                     <li class="option" data-filter="age:55-64">
-                                                        <input type="checkbox" name="age-5" id="age-5" value="contextdatavalue_age:55-64"> <label for="age-5">55-64</label>
+                                                        <input type="checkbox" bvEventType="filter" name="age-5" id="age-5" value="contextdatavalue_age:55-64"> <label for="age-5">55-64</label>
                                                     </li>
                                                     <li class="option" data-filter="age:65%2B">
-                                                        <input type="checkbox" name="age-6" id="age-6" value="contextdatavalue_age:65%2B"> <label for="age-6">65 and older</label>
+                                                        <input type="checkbox" bvEventType="filter" name="age-6" id="age-6" value="contextdatavalue_age:65%2B"> <label for="age-6">65 and older</label>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -305,10 +309,10 @@
                                         </p>
                                         <ul class="block-list module js-reviews-filter js-gender-filter">
                                             <li class="option" data-filter="gender:male">
-                                                <input type="checkbox" name="gender-1" id="gender-1" value="contextdatavalue_gender:male"> <label for="gender-1">Male</label>
+                                                <input type="checkbox" bvEventType="filter" name="gender-1" id="gender-1" value="contextdatavalue_gender:male"> <label for="gender-1">Male</label>
                                             </li>
                                             <li class="option" data-filter="gender:female">
-                                                <input type="checkbox" name="gender-2" id="gender-2" value="contextdatavalue_gender:female"> <label for="gender-2">Female</label>
+                                                <input type="checkbox" bvEventType="filter" name="gender-2" id="gender-2" value="contextdatavalue_gender:female"> <label for="gender-2">Female</label>
                                             </li>
                                         </ul>
                                     </div>
@@ -338,16 +342,16 @@
                                             Purchased this item when my larger one died. I was a little hesitant because of the size which was much smaller than my old one, but have found it to be quite adequate. I decided on this model for 3 reasons. The reputable brand. The good reviews and most important, the ease of opening . There is no button to push that will wear out. I have been using this for about 2 months now and find it to be an exceptional value. It even reminds me when I forget something. The timer can be used at the same time you cook which was very nice to find. It heats quickly so quickly in fact I have found it takes much less time than my larger one did and have had to adjust the times on some things..it also cooks and heats more evenly. The control panel is flat. Easy to clean and is relatively quiet. Over all I am very pleased with the purchase. I will purchase it again if it is still available when I need another new one. I highly recommend this item. It is a great deal for the money. It also arrived 5 days ahead of schedule.
                                         </div>
                                         <div class="js-ellipsis-read-more ellipsis-read-more">
-                                            <a href="#" id="readMore">Read more</a>
+                                            <a href="#" id="readMore" bvEventType="expand-retract" data-value="more">Read more</a>
                                         </div>
                                     </div>
                                     <div class="btn-vote-group js-btn-vote-group customer-review-voting hide-content display-inline-block-m">
                                         <span class="btn-vote-heading">Was this review helpful?</span> 
-                                        <button type="button" class="btn btn-vote js-btn-vote-yes" id="helpfulness-btn-yes"><i class="btn-vote-up"></i>Yes
+                                        <button type="button" class="btn btn-vote js-btn-vote-yes" bvEventType="votingHelpfulness" data-value="yes" id="helpfulness-btn-yes"><i class="btn-vote-up"></i>Yes
                                         </button> 
-                                        <span class="btn-vote-count">(<span class="js-vote-positive-count">165</span>)</span> <button type="button" class="btn btn-vote js-btn-vote-no" id="helpfulness-btn-no"><i class="btn-vote-down"></i>No</button> <span class="btn-vote-count">(<span class="js-vote-negative-count">4</span>)
+                                        <span class="btn-vote-count">(<span class="js-vote-positive-count">165</span>)</span> <button type="button" class="btn btn-vote js-btn-vote-no" bvEventType="votingHelpfulness" data-value="no" id="helpfulness-btn-no"><i class="btn-vote-down"></i>No</button> <span class="btn-vote-count">(<span class="js-vote-negative-count">4</span>)
                                         </span> 
-                                        <button class="btn btn-link customer-review-report-btn js-btn-report pull-right" id="reports_btn"><i class="wmicon wmicon-flag"></i>&nbsp;Report
+                                        <button class="btn btn-link customer-review-report-btn js-btn-report pull-right" id="reports_btn" data-value="report" bvEventType="modal"><i class="wmicon wmicon-flag"></i>&nbsp;Report
                                         </button>
                                         <div class="pull-right hide-content thank-you-report js-thank-you-report">
                                             Thank you! You have successfully submitted feedback for this review.
@@ -392,7 +396,7 @@
                                         </div>
                                     </div>
                                     <div class="review-badges-container">
-                                        <div class="review-badge" id="badge">
+                                        <div class="review-badge" id="badge" bvEventType="modal" >
                                             <i class="wmicon wmicon-user"></i>
                                             Staff
                                         </div>
@@ -405,30 +409,30 @@
                                 <div class="paginator-list pull-left">
                                     <ul>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link active" data-page="1">1</a>
+                                            <a href="#reviews" role="button" class="js-pagination link active" bvEventType="pagination" data-page="1">1</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" data-page="2">2</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="2">2</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" data-page="3">3</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="3">3</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" data-page="4">4</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="4">4</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" data-page="5">5</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="5">5</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" data-page="6">6</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="6">6</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" data-page="9">9</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="9">9</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="review-stats copy-small pull-right">
-                                    <span>1 of 355 total reviews</span> <a href="#reviews" class="js-reviews-see-all arrow-link" id="WMItemSeeAllRevLnk">See all</a>
+                                    <span>1 of 355 total reviews</span> <a href="#reviews" class="js-reviews-see-all arrow-link" bvEventType="pagination" data-page="seeAll" id="WMItemSeeAllRevLnk">See all</a>
                                 </div>
                             </div>
                         </div>

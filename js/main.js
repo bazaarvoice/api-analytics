@@ -74,90 +74,92 @@ $( document ).ready(function() {
             $( this ).removeClass( "active" );
         }
     );
-    //filters
-
-    $(" .review-filter-toggle").on('click', '.more-link', function(e) {
-        e.preventDefault();
-        $(".expander-content.module.age-gender-filters").css("display", "block");
-        $(".review-filter-toggle .more-link").toggleClass("expanded");
-        $(".review-filter-toggle .more-link").text("Hide Filters");
-        featuredUsed($(this), 'filter', 'display');
-    });
-
-    $(" .review-filter-toggle").on('click', '.more-link.expanded', function(e) {
-        e.preventDefault();
-        $(".expander-content.module.age-gender-filters").css("display", "none");
-        $(".review-filter-toggle .more-link.expanded").toggleClass("expanded");
-        $(".review-filter-toggle .more-link").text("Show filters");
-        featuredUsed($(this), 'filter', 'hide');
-    });
-
-
-    //sub Filter
-    $(".block-list.module li input").on('click', function(e) {
-       featuredUsed($(this), 'subFilter', '');
-    });
-
-
-    // sort by
+    // Additional CSS 
     $( ".chooser-option-current.js-chooser-option-current" ).on('click', function(e) {
         $( ".chooser-option-current.js-chooser-option-current" ).addClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).addClass('active');
-        
+    });
+    
+    //filters
+    $(" .review-filter-toggle").on('click', '.more-link', function(e) {
+        e.preventDefault();
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        $(this).attr('data-value', 'less');
+        $(".expander-content.module.age-gender-filters").css("display", "block");
+        $(".review-filter-toggle .more-link").toggleClass("expanded");
+        $(".review-filter-toggle .more-link").text("Hide Filters");
         
     });
-    //sort by sub filter
+    $(" .review-filter-toggle").on('click', '.more-link.expanded', function(e) {
+        e.preventDefault();
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        $(this).attr('data-value', 'more');
+        $(".expander-content.module.age-gender-filters").css("display", "none");
+        $(".review-filter-toggle .more-link.expanded").toggleClass("expanded");
+        $(".review-filter-toggle .more-link").text("Show filters");
+        // featuredUsed($(this), 'filter', 'hide');
+    });
+
+    //sub Filter
+    $(".block-list.module li input").on('click', function(e) {
+       featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('name'));
+    });
+
+    //sort
     $(" .chooser-option.js-chooser-option").on('click', function(e) {
-        featuredUsed($(this), 'subSortClick', '');
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-chooser-value'));
         $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
     });
 
     // write a review
-    $( "#WMItemWriteReviewLnk" ).on('click', function(e) {
-        featuredUsed($(this), 'writeReview', '');
+    $( ".js-write-review" ).on('click', function(e) {
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
-    
-    // review helpful - yes
-    $( ".btn-vote.js-btn-vote-yes" ).on('click', function(e) {
-        featuredUsed($(this), 'helpfulness', 'yes');
-    });
-    
-    // review helpful - no
-    $( ".btn-vote.js-btn-vote-no" ).on('click', function(e) {
-        featuredUsed($(this), 'helpfulness', 'no');
+        
+    // review helpful - yes and no
+    $( ".btn-vote.js-btn-vote-yes, .btn-vote.js-btn-vote-no" ).on('click', function(e) {
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
 
-    // read more
+    // read more/less
     $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function(e) {
         e.preventDefault();
-        featuredUsed($(this), 'expand review', $(this)[0].innerHTML);
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+
         $( ".ellipsis-read-more a" ).text('Read Less');
+        if ($( ".ellipsis-read-more a" ).attr("data-value") == "more") {
+            $( ".ellipsis-read-more a" ).attr("data-value","less");
+        }
+        else{
+            $( ".ellipsis-read-more a" ).attr("data-value", "more");
+            $( ".ellipsis-read-more a" ).text('Read More');
+        }
         $( ".ellipsis-content.module" ).toggleClass('expanded');
     });
 
     // report
     $( ".customer-review-report-btn" ).on('click', function(e) {
-        featuredUsed($(this), 'report', '');
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
     
     // badge (i.e. verified purchaser, top 100 contributor)
     $( ".review-badge" ).on('click', function(e) {
-        featuredUsed($(this), 'badge', '');
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('id'));
     });
     // see all 
     $( ".js-reviews-see-all.arrow-link" ).on('click', function(e) {
-        featuredUsed($(this), 'see all', '');
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-page'));
     });
 
     // pagination
     $( ".paginator-list ul li a" ).on('click', function(e) {
-        featuredUsed($(this), 'pagination', $(this.innerHTML));
-
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-page'));
     });
+
     // stars Histogram
     $( ".js-rating-filter.rating-filter" ).on('click', function(e) {
-        featuredUsed($(this), 'starHistogram', $(this.getElementsByClassName('meter-inline')[0]).text());
+        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
 });
     
@@ -175,32 +177,7 @@ function featuredUsedInView(item){
 
 function featuredUsed(item, detail1, detail2){
     var name ='';
-
-    if ((item[0].id == null ) || (item[0].id == '')) {
-        console.log('get another ID..look at the child');
-        if (item.hasClass('rating-filter')){ //this is the histogram
-            name = item[0].children[1].className;
-        }
-        else if (item.hasClass('chooser-option')){ //this is the subsort
-            name = item[0].className.substring(0, item[0].className.indexOf(' '));
-            detail2 = item[0].innerHTML;
-        }
-        else if (item.hasClass('js-pagination')){ //this is Pagination
-            name = item[0].className.substring(0, item[0].className.indexOf(' '));
-            detail2 = item[0].innerHTML;
-        }
-    }
-    else{
-        //hack for ID check when using Labels
-        if(item[0].getAttribute('type') == 'checkbox'){ //used for SubFilters
-            name = item[0].getAttribute('type');
-            detail2 = item[0].getAttribute('value');
-        }
-        else{
-            name = item[0].id;
-        }
-    }
-
+debugger;
     _bvapiq.push(['FeatureUsed', {
         clientID: featureObject.clientID,
         environment: featureObject.environment,
