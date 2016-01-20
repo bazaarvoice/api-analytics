@@ -33,8 +33,6 @@ $( document ).ready(function() {
     _bvapiq.push(['PIIConversionTransaction', TransactionData]);
 
     window._bvapiq = window._bvapiq || [];
-    // _bvapiq.push(['ConversionTransaction', TransactionData]);
-
 });
 
 

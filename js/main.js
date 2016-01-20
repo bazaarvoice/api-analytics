@@ -75,37 +75,32 @@ $( document ).ready(function() {
         }
     );
     //filters
-//TO DO make this only execute ONCE
+
     $(" .review-filter-toggle").on('click', '.more-link', function(e) {
         e.preventDefault();
         $(".expander-content.module.age-gender-filters").css("display", "block");
         $(".review-filter-toggle .more-link").toggleClass("expanded");
         $(".review-filter-toggle .more-link").text("Hide Filters");
-        // filterClick($(this));
-         featuredUsed($(this), 'filter', 'display');
+        featuredUsed($(this), 'filter', 'display');
     });
-//END TO DO make this only execute ONCE
 
     $(" .review-filter-toggle").on('click', '.more-link.expanded', function(e) {
         e.preventDefault();
         $(".expander-content.module.age-gender-filters").css("display", "none");
         $(".review-filter-toggle .more-link.expanded").toggleClass("expanded");
         $(".review-filter-toggle .more-link").text("Show filters");
-        // filterClick($(this));
-         featuredUsed($(this), 'filter', 'hide');
+        featuredUsed($(this), 'filter', 'hide');
     });
 
 
     //sub Filter
     $(".block-list.module li input").on('click', function(e) {
        featuredUsed($(this), 'subFilter', '');
-       //subFilterClick($(this));
     });
 
 
     // sort by
     $( ".chooser-option-current.js-chooser-option-current" ).on('click', function(e) {
-        //do some css trickery
         $( ".chooser-option-current.js-chooser-option-current" ).addClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).addClass('active');
         
@@ -114,54 +109,51 @@ $( document ).ready(function() {
     //sort by sub filter
     $(" .chooser-option.js-chooser-option").on('click', function(e) {
         featuredUsed($(this), 'subSortClick', '');
-        //subSortClick($(this));
         $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
     });
 
     // write a review
     $( "#WMItemWriteReviewLnk" ).on('click', function(e) {
-        // writeReviewClick($(this));
         featuredUsed($(this), 'writeReview', '');
     });
-    // review helpful
-    // yes
+    
+    // review helpful - yes
     $( ".btn-vote.js-btn-vote-yes" ).on('click', function(e) {
         featuredUsed($(this), 'helpfulness', 'yes');
-        // helpfulYesClick($(this));
     });
-    // no
+    
+    // review helpful - no
     $( ".btn-vote.js-btn-vote-no" ).on('click', function(e) {
         featuredUsed($(this), 'helpfulness', 'no');
-        // helpfulNoClick($(this));
     });
 
     // read more
     $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function(e) {
         e.preventDefault();
         featuredUsed($(this), 'expand review', $(this)[0].innerHTML);
-        // start some css trickery
         $( ".ellipsis-read-more a" ).text('Read Less');
         $( ".ellipsis-content.module" ).toggleClass('expanded');
-        // end css trickery
     });
 
     // report
     $( ".customer-review-report-btn" ).on('click', function(e) {
         featuredUsed($(this), 'report', '');
     });
+    
     // badge (i.e. verified purchaser, top 100 contributor)
     $( ".review-badge" ).on('click', function(e) {
         featuredUsed($(this), 'badge', '');
     });
-    // see all > 
+    // see all 
     $( ".js-reviews-see-all.arrow-link" ).on('click', function(e) {
         featuredUsed($(this), 'see all', '');
     });
+
     // pagination
     $( ".paginator-list ul li a" ).on('click', function(e) {
         featuredUsed($(this), 'pagination', $(this.innerHTML));
-// TO DO TEST THE ABOVE
+
     });
     // stars Histogram
     $( ".js-rating-filter.rating-filter" ).on('click', function(e) {
@@ -171,18 +163,15 @@ $( document ).ready(function() {
     
 
 //we need to have a controlled vocabulary for the details values
-//that is used to construct the feature object. What has been 
-//suggested is:
-//1. filter
-//2. sort
-//3. paginate
-//?? should the the details2 value be the ID of the control? What does 
-//that get us?
+//that is used to construct the feature object. 
+    //suggestions:
+    //1. filter
+    //2. sort
+    //3. paginate
 
 function featuredUsedInView(item){
     _bvapiq.push(['FeatureUsedInView', item]);
 }
-
 
 function featuredUsed(item, detail1, detail2){
     var name ='';

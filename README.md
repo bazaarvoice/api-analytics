@@ -5,16 +5,17 @@ The Bazaarvoice API Analytics starter kit is a sample consisting of static HTML,
 
 Before Downloading:
 -------------
-1. Read the documentation on the [API Analytics tutorial](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) to ensure you understand the benefits of analytics as well as the requirements. Developers should also be familiar with the [API Terms of Use](https://developer.bazaarvoice.com/legal/terms_of_use).
-2. Download and install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd).
-3. Visit the [hosted sample pages](https://github.com/bazaarvoice/api-analytics/blob/master/README.md#hosted-sample). Both the [product description page](https://s3.amazonaws.com/api-analytics/index.html) and the [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) can be considered working samples of the API Analytics starter kit.
-4. Realize that the starter kit is meant as a sample. It is static and by no means optimized for speed and scale. There are no calls made to the Conversations API to get product data. The key/value are hard coded in the js file. The code is provided as a means to help API users better understand API analytics.
+1. Implementing the API Analytics Tags is required according to the [API terms and conditions](http://www.bazaarvoice.com/legal/conversations-api-terms-of-use.html)
+2. Read the [API Analytics tutorial](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) documentation.  Developers should also be familiar with the [API Terms of Use](http://www.bazaarvoice.com/legal/api-terms-of-use.html).
+3. Install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd).
+4. The code in this GitHub repo is also [hosted on a web server](https://s3.amazonaws.com/api-analytics/index.html). Both the [product description page](https://s3.amazonaws.com/api-analytics/index.html) and the [conversion page](https://s3.amazonaws.com/api-analytics/conversion.html) can be considered working samples of the API Analytics starter kit. Users should interact with the pages with the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd) enabled to help understand the implementation.
+5. Realize that the starter kit is meant as a sample. It is static, and by no means optimized for speed and scale. There are no calls made to the Conversations API to get product data. The key/value are hard coded in the js file. The code is provided as a means to help API users better understand API analytics.
 
 What is the sample doing?
 -------------------------
-This tutorial captures a user's actions on the products detail page and returns the data to Bazaarvoice for further investigation. Accompanying the code on the product details page, is code associated with the conversion event. Bazaarvoice supports various definitions of conversion, both  non-commercial conversion and traditional e-commerce conversion.  By connecting the user's behavior on the product details page to the conversion page, we can evaluate the likelhood of a customer completing conversion by monitoring their behavior throught out the site.
+This tutorial captures a user's actions on the product details page.  Accompanying the code on the product details page, is code associated with the conversion event. Bazaarvoice supports various definitions of conversion, both  non-commercial conversion and traditional e-commerce conversion.  By connecting the user's behavior on the product details page to the conversion page, we are able to track the site conversion rate of those who have interacted with user generated content.
 
-All this is accomplished by adding code that captures how user's interact with the consumer generated content. User events (e.g. viewing the page, scrolling the page, and interacting with the different web inputs) should all be captured within the site.  Attaching code to these different events is custom coding for the site developer. This is possible through various techniques and languages, its up to your development team determine the best technical solution.
+All this is accomplished by adding code that captures how user's interact with the consumer generated content. User events (e.g. viewing the page, scrolling the page, and interacting with the different web inputs) should all be captured within the site.  Attaching client-side javascript code to these different events is the responsibility of the site developer. 
 
 After the custom code capturing the different parameters is completed and associated with HTML event, the final step is a simple call using the [Bazaarvoice API Tracker library](https://magpie-static.ugc.bazaarvoice.com/magpie-api/1.4/bvAnalyticsAPITracker.min.js.gz).  
 
@@ -24,7 +25,7 @@ The tracking code requires 2 arguments:
     <li>an object containing the key/value pairs. </li>
 </ul>
 
-The following samples demonstrate the various analytic calls:
+The following samples demonstrate some of the analytic calls:
 ```js
     _bvapiq.push(['FeatureUsedInView', item]);
     _bvapiq.push(['FeatureUsed', {
@@ -52,7 +53,7 @@ The javascript on the [sample product description page](https://s3.amazonaws.com
 
 ##### [Page View Product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)
 
-Each time a products detail page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete, the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
+Each time a product details page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete, the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
 
 ___
 
