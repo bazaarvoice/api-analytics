@@ -48,7 +48,6 @@ $( window ).on('resize, scroll', function(event) {
 });
 
 $( document ).ready(function() {
-    //fire off Page View Product when ever the page is loaded
      _bvapiq.push(['PageViewProduct', {
         bvProduct: 'RatingsAndReviews',
         clientID: clientId,
@@ -81,7 +80,7 @@ $( document ).ready(function() {
     });
     
     //filters
-    $(" .review-filter-toggle").on('click', '.more-link', function(e) {
+    $(" .review-filter-toggle").on('click', '.more-link', function filtersExpandClick(e) {
         e.preventDefault();
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
         $(this).attr('data-value', 'less');
@@ -90,7 +89,7 @@ $( document ).ready(function() {
         $(".review-filter-toggle .more-link").text("Hide Filters");
         
     });
-    $(" .review-filter-toggle").on('click', '.more-link.expanded', function(e) {
+    $(" .review-filter-toggle").on('click', '.more-link.expanded', function filtersCollapseClick(e) {
         e.preventDefault();
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
         $(this).attr('data-value', 'more');
@@ -100,30 +99,25 @@ $( document ).ready(function() {
         // featuredUsed($(this), 'filter', 'hide');
     });
 
-    //sub Filter
-    $(".block-list.module li input").on('click', function(e) {
+    $(".block-list.module li input").on('click', function subFilterClick(e) {
        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('name'));
     });
 
-    //sort
-    $(" .chooser-option.js-chooser-option").on('click', function(e) {
+    $(" .chooser-option.js-chooser-option").on('click', function sortClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-chooser-value'));
         $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
     });
 
-    // write a review
-    $( ".js-write-review" ).on('click', function(e) {
+    $( ".js-write-review" ).on('click', function writeReviewClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
         
-    // review helpful - yes and no
-    $( ".btn-vote.js-btn-vote-yes, .btn-vote.js-btn-vote-no" ).on('click', function(e) {
+    $( ".btn-vote.js-btn-vote-yes, .btn-vote.js-btn-vote-no" ).on('click', function helpfulnessClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
 
-    // read more/less
-    $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function(e) {
+    $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function readMoreLessClick(e) {
         e.preventDefault();
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
 
@@ -138,27 +132,23 @@ $( document ).ready(function() {
         $( ".ellipsis-content.module" ).toggleClass('expanded');
     });
 
-    // report
-    $( ".customer-review-report-btn" ).on('click', function(e) {
+    $( ".customer-review-report-btn" ).on('click', function reportClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
     
-    // badge (i.e. verified purchaser, top 100 contributor)
-    $( ".review-badge" ).on('click', function(e) {
+    $( ".review-badge" ).on('click', function badgeClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('id'));
     });
-    // see all 
-    $( ".js-reviews-see-all.arrow-link" ).on('click', function(e) {
+    
+    $( ".js-reviews-see-all.arrow-link" ).on('click', function seeAllClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-page'));
     });
 
-    // pagination
-    $( ".paginator-list ul li a" ).on('click', function(e) {
+    $( ".paginator-list ul li a" ).on('click', function paginationClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-page'));
     });
 
-    // stars Histogram
-    $( ".js-rating-filter.rating-filter" ).on('click', function(e) {
+    $( ".js-rating-filter.rating-filter" ).on('click', function starHistogramClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
     });
 });
@@ -177,7 +167,6 @@ function featuredUsedInView(item){
 
 function featuredUsed(item, detail1, detail2){
     var name ='';
-debugger;
     _bvapiq.push(['FeatureUsed', {
         clientID: featureObject.clientID,
         environment: featureObject.environment,
