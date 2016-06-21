@@ -104,7 +104,7 @@ First, download and install the [Bazaarvoice Analytics Inspector for Chrome](htt
 
 <img width=30% alt="Bazaarvoice Analytics Inspector browser extenstion" src="https://cloud.githubusercontent.com/assets/2584258/11514761/c7948e42-983f-11e5-8b90-a3f724da7475.jpg">
 
-Next, visit the product description page [hosted API Analytics solutions](http://api-analytics-kit.bazaarvoice.com/). Open the [Bazaarvoice Analytics Inspector](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd) and interact with the page. The tool documents each time an analytic event is captured and send the Bazzarvoice.  Notice the red counter on the icon.
+Next, visit the product description page [hosted API Analytics solutions](http://api-analytics-kit.bazaarvoice.com/). Open the [Bazaarvoice Analytics Inspector](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd) and interact with the page. The tool documents each time an analytics event is captured and sent to Bazaarvoice. Notice the red counter on the icon.
 
 <img width=30% alt="Bazaarvoice Analytics Inspector browser extenstion" src="https://cloud.githubusercontent.com/assets/2584258/11639298/b2339294-9cf1-11e5-8e5a-2cd59183dd44.jpg">
 
@@ -122,7 +122,7 @@ Things to Note
 ----------------
 This sample does not make API calls to retrieve and bind client data. Values that should be obtained from the API are hard coded in the HTML and js files. Comments have been added where the values should be obtained from the API. 
 
-The sample works in conjunction with the [Bazzarvoice Analytics Inspector](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd) to aid clients in making sure the implementation is complete. 
+The sample works in conjunction with the [Bazaarvoice Analytics Inspector](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd) to aid clients in making sure the implementation is complete. 
 
-It is required to have an Bazzarvoice staff member to agree that an implementation has been completed.  
+It is required that a Bazaarvoice team member verify the completion of each implementation.  
 
