@@ -21,6 +21,8 @@
           ga('send', 'pageview');
 
         </script>
+        <!-- Load the BV scoutfile -->
+        <script src="https://apps.bazaarvoice.com/deployments/Agileville/main_site/production/en_US/bv.js"></script>
     </head>
     <body>
         <header>
@@ -28,7 +30,7 @@
                 <div class="container">
                     <h1>
                         <a class="brand" href="#top">
-                            <img src="images/logo.png" alt="bazaarvoice:"> 
+                            <img src="images/logo.png" alt="bazaarvoice:">
                             <span>Conversations API Analytics Kit</span>
                         </a>
                     </h1>
@@ -51,7 +53,7 @@
                                 </h1>
                                 <div class="product-subhead">
                                     <div class="product-subhead-section-stars">
-                                        <div class="stars hide-content display-inline-l"> 
+                                        <div class="stars hide-content display-inline-l">
                                             <a class="js-product-anchor display-block" href="#reviews" id="WMItemRevLnk">
                                                 <i class="star star-rated"></i>
                                                 <i class="star star-rated"></i>
@@ -59,7 +61,7 @@
                                                 <i class="star star-rated"></i>
                                                 <i class="star star-empty"></i>
                                                 <span class="visuallyhidden">4.0 stars</span>
-                                            </a> 
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="product-subhead-section">
@@ -80,19 +82,17 @@
                                         <div class="Grid">
                                             <div class="Grid-col u-size-10-12-l js-hero-image-container" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none;">
                                                 <div class="product-images js-product-images">
-                                                    <div class="product-images-viewport js-viewport">                             
+                                                    <div class="product-images-viewport js-viewport">
                                                         <img src="images/beer.jpg" data-zoom-image="" alt="" style="height:100%;">
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="grid review-header">
@@ -118,7 +118,7 @@
                                             <i class="star star-rated"></i>
                                             <i class="star star-rated"></i>
                                             <i class="star star-empty"></i>
-                                            
+
                                             <span class="visuallyhidden">4.0 stars</span>
                                             <p class="heading-e">
                                                 <span itemprop="ratingCount">355</span> reviews | <span itemprop="ratingValue">3.8</span> out of <span itemprop="bestRating">5</span>
@@ -346,11 +346,11 @@
                                         </div>
                                     </div>
                                     <div class="btn-vote-group js-btn-vote-group customer-review-voting hide-content display-inline-block-m">
-                                        <span class="btn-vote-heading">Was this review helpful?</span> 
+                                        <span class="btn-vote-heading">Was this review helpful?</span>
                                         <button type="button" class="btn btn-vote js-btn-vote-yes" bvEventType="votingHelpfulness" data-value="yes" id="helpfulness-btn-yes"><i class="btn-vote-up"></i>Yes
-                                        </button> 
+                                        </button>
                                         <span class="btn-vote-count">(<span class="js-vote-positive-count">165</span>)</span> <button type="button" class="btn btn-vote js-btn-vote-no" bvEventType="votingHelpfulness" data-value="no" id="helpfulness-btn-no"><i class="btn-vote-down"></i>No</button> <span class="btn-vote-count">(<span class="js-vote-negative-count">4</span>)
-                                        </span> 
+                                        </span>
                                         <button class="btn btn-link customer-review-report-btn js-btn-report pull-right" id="reports_btn" data-value="report" bvEventType="modal"><i class="wmicon wmicon-flag"></i>&nbsp;Report
                                         </button>
                                         <div class="pull-right hide-content thank-you-report js-thank-you-report">
@@ -451,9 +451,7 @@
             </div>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="https://magpie-static.ugc.bazaarvoice.com/magpie-api/1.4/bvAnalyticsAPITracker.min.js.gz"></script>       
         <script type="text/javascript" src="js/main.js"></script>
-        
- 
+        <script type="text/javascript" src="js/pdp-analytics.js"></script>
     </body>
 </html>
