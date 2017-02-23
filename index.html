@@ -224,7 +224,7 @@
                                 </div>
                             </div>
                             <div class="Grid-col u-size-3-12-m">
-                                <a href="#reviews" class="js-write-review btn pull-right" id="WMItemWriteReviewLnk" bvEventType="writeReview" data-value="review">Write a review</a>
+                                <a href="#reviews" class="js-write-review btn pull-right" id="WMItemWriteReviewLnk" bvEventType="write" data-value="review">Write a review</a>
                             </div>
                         </div>
                     </div>
@@ -347,14 +347,12 @@
                                     </div>
                                     <div class="btn-vote-group js-btn-vote-group customer-review-voting hide-content display-inline-block-m">
                                         <span class="btn-vote-heading">Was this review helpful?</span>
-                                        <button type="button" class="btn btn-vote js-btn-vote-yes" bvEventType="votingHelpfulness" data-value="yes" id="helpfulness-btn-yes"><i class="btn-vote-up"></i>Yes
+                                        <button type="button" class="btn btn-vote js-btn-vote-yes" bvEventType="helpfulness" data-value="positive" id="helpfulness-btn-yes"><i class="btn-vote-up"></i>Yes
                                         </button>
-                                        <span class="btn-vote-count">(<span class="js-vote-positive-count">165</span>)</span> <button type="button" class="btn btn-vote js-btn-vote-no" bvEventType="votingHelpfulness" data-value="no" id="helpfulness-btn-no"><i class="btn-vote-down"></i>No</button> <span class="btn-vote-count">(<span class="js-vote-negative-count">4</span>)
+                                        <span class="btn-vote-count">(<span class="js-vote-positive-count">165</span>)</span> <button type="button" class="btn btn-vote js-btn-vote-no" bvEventType="helpfulness" data-value="negative" id="helpfulness-btn-no"><i class="btn-vote-down"></i>No</button> <span class="btn-vote-count">(<span class="js-vote-negative-count">4</span>)
                                         </span>
-                                        <button class="btn btn-link customer-review-report-btn js-btn-report pull-right" id="reports_btn" data-value="report" bvEventType="modal"><i class="wmicon wmicon-flag"></i>&nbsp;Report
-                                        </button>
-                                        <div class="pull-right hide-content thank-you-report js-thank-you-report">
-                                            Thank you! You have successfully submitted feedback for this review.
+
+                                        <div class="btn btn-link customer-review-report-btn js-btn-report pull-right" id="reports_btn" data-value="report" bvEventType=""><i class="wmicon wmicon-flag"></i>&nbsp;Report
                                         </div>
                                     </div>
                                     <div class="Grid Grid--gutters btn-vote-group js-btn-vote-group customer-review-voting hide-content-m">
@@ -409,25 +407,25 @@
                                 <div class="paginator-list pull-left">
                                     <ul>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link active" bvEventType="pagination" data-page="1">1</a>
+                                            <a href="#reviews" role="button" class="js-pagination link active" bvEventType="paginate" data-page="1">1</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="2">2</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="paginate" data-page="2">2</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="3">3</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="paginate" data-page="3">3</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="4">4</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="paginate" data-page="4">4</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="5">5</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="paginate" data-page="5">5</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="6">6</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="paginate" data-page="6">6</a>
                                         </li>
                                         <li>
-                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="pagination" data-page="9">9</a>
+                                            <a href="#reviews" role="button" class="js-pagination link" bvEventType="paginate" data-page="9">9</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -9,7 +9,8 @@ var name = '',
   numQuestions = 0,
   numAnswers = 0,
   avgRating = 5.0,
-  percentRecommended = 100;
+  percentRecommended = 100,
+  bvProduct = 'RatingsAndReviews';
 
 // If your PDP is using BV stats for R&R, track a "RatingsAndReviews" PageView.
 // Similarly, track "QuestionsAndAnswers" PageView for Q&A on the PDP.
@@ -47,7 +48,7 @@ $( document ).ready(function() {
     //filters
     $(".review-filter-toggle").on('click', '.more-link', function filtersExpandClick (e) {
         e.preventDefault();
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        //featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
         $(this).attr('data-value', 'less');
         $(".expander-content.module.age-gender-filters").css("display", "block");
         $(".review-filter-toggle .more-link").toggleClass("expanded");
@@ -56,7 +57,7 @@ $( document ).ready(function() {
 
     $(" .review-filter-toggle").on('click', '.more-link.expanded', function filtersCollapseClick(e) {
         e.preventDefault();
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        //featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
         $(this).attr('data-value', 'more');
         $(".expander-content.module.age-gender-filters").css("display", "none");
         $(".review-filter-toggle .more-link.expanded").toggleClass("expanded");
@@ -73,13 +74,13 @@ $( document ).ready(function() {
         $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
         $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
     });
-
+// GOOD
     $( ".js-write-review" ).on('click', function writeReviewClick(e) {
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-value'), '');
     });
-
+// GOOD
     $( ".btn-vote.js-btn-vote-yes, .btn-vote.js-btn-vote-no" ).on('click', function helpfulnessClick(e) {
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-value'), '');
     });
 
     $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function readMoreLessClick(e) {
@@ -96,26 +97,27 @@ $( document ).ready(function() {
         }
         $( ".ellipsis-content.module" ).toggleClass('expanded');
     });
-
+// GOOD 
     $( ".customer-review-report-btn" ).on('click', function reportClick(e) {
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        featuredUsed($(this).attr('data-value'), '', '');
     });
 
-    $( ".review-badge" ).on('click', function badgeClick(e) {
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('id'));
-    });
+    // $( ".review-badge" ).on('click', function badgeClick(e) {
+    //     console.log('aaa');
+    //     featuredUsed('profile', ' ', ' ');
+    // });
 
     $( ".js-reviews-see-all.arrow-link" ).on('click', function seeAllClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-page'));
     });
-
+// GOOD 
     $( ".paginator-list ul li a" ).on('click', function paginationClick(e) {
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-page'));
+        featuredUsed($(this).attr('bvEventType'), 'next', $(this).attr('data-page'));
     });
 
-    $( ".js-rating-filter.rating-filter" ).on('click', function starHistogramClick(e) {
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
-    });
+    // $( ".js-rating-filter.rating-filter" ).on('click', function starHistogramClick(e) {
+    //     $(this).attr('bvEventType'), featuredUsed($(this), $(this).attr('data-value'));
+    // });
 });
 
 //we need to have a controlled vocabulary for the details values
@@ -125,14 +127,13 @@ $( document ).ready(function() {
     //2. sort
     //3. paginate
 
-function featuredUsed(item, detail1, detail2){
-  var name ='';
+function featuredUsed(name, detail1, detail2){
   BV.pixel.trackEvent('Feature', {
     type: 'Used',
     name: name,
     brand: brand,
     productId: productId,
-    bvProduct: null,
+    bvProduct: bvProduct,
     categoryId: categoryId,
     detail1: detail1,
     detail2: detail2
