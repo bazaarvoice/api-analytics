@@ -65,67 +65,61 @@ $( document ).ready(function() {
         // featuredUsed($(this), 'filter', 'hide');
     });
 
-    $(".block-list.module li input").on('click', function subFilterClick(e) {
-       featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('name'));
-    });
-
-    $(" .chooser-option.js-chooser-option").on('click', function sortClick(e) {
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-chooser-value'));
-        $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
-        $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
-    });
-// GOOD
-    $( ".js-write-review" ).on('click', function writeReviewClick(e) {
-        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-value'), '');
-    });
-// GOOD
-    $( ".btn-vote.js-btn-vote-yes, .btn-vote.js-btn-vote-no" ).on('click', function helpfulnessClick(e) {
-        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-value'), '');
-    });
-
-    $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function readMoreLessClick(e) {
+    $( ".js-ellipsis-read-more.ellipsis-read-more a").on('click', function reLessClick(e) {
         e.preventDefault();
-        featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        //featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-value'));
+        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-value'), '');
 
         $( ".ellipsis-read-more a" ).text('Read Less');
-        if ($( ".ellipsis-read-more a" ).attr("data-value") == "more") {
-            $( ".ellipsis-read-more a" ).attr("data-value","less");
+        if ($( ".ellipsis-read-more a" ).attr("data-value") == "expand") {
+            $( ".ellipsis-read-more a" ).attr("data-value","collapse");
         }
         else{
-            $( ".ellipsis-read-more a" ).attr("data-value", "more");
+            $( ".ellipsis-read-more a" ).attr("data-value", "expand");
             $( ".ellipsis-read-more a" ).text('Read More');
         }
         $( ".ellipsis-content.module" ).toggleClass('expanded');
     });
-// GOOD 
+
+    $(".block-list.module li input").on('click', function subFilterClick(e) {
+       featuredUsed($(this).attr('bvEventType'), $(this).attr('value'), this.checked);
+    });
+
+    $(" .chooser-option.js-chooser-option").on('click', function sortClick(e) {
+        console.log('SortBy');
+        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-chooser-value'), '');
+        //featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-chooser-value'));
+        $( ".chooser-option-current.js-chooser-option-current" ).removeClass('hidden');
+        $( ".chooser.js-chooser.chooser-fixed-width.chooser-alt" ).removeClass('active');
+    });
+
+    $( ".js-write-review" ).on('click', function writeReviewClick(e) {
+        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-value'), '');
+    });
+    $( ".btn-vote.js-btn-vote-yes, .btn-vote.js-btn-vote-no" ).on('click', function helpfulnessClick(e) {
+        featuredUsed($(this).attr('bvEventType'), $(this).attr('data-value'), '');
+    });
+    $( ".paginator-list ul li a" ).on('click', function paginationClick(e) {
+        featuredUsed($(this).attr('bvEventType'), 'next', $(this).attr('data-page'));
+    });
     $( ".customer-review-report-btn" ).on('click', function reportClick(e) {
         featuredUsed($(this).attr('data-value'), '', '');
     });
-
-    // $( ".review-badge" ).on('click', function badgeClick(e) {
-    //     console.log('aaa');
-    //     featuredUsed('profile', ' ', ' ');
-    // });
+    $( ".product-subhead .reviewCount" ).on('click', function reviewCount(e) {
+       featuredUsed('link', $(this).attr('data-value'), 'PrimaryRatingSummary');
+    });
+    $( ".product-subhead .q_and_a" ).on('click', function qAndA(e) {
+       featuredUsed('link', $(this).attr('data-value'), 'PrimaryRatingSummary');
+    });
+    $( ".review-histogram .review-histogram-wrapper .rating-filter" ).on('click', function filteredHistogram(e) {
+      featuredUsed($(this).attr('bvEventType'), '', $(this).attr('data-value'));
+    });
 
     $( ".js-reviews-see-all.arrow-link" ).on('click', function seeAllClick(e) {
         featuredUsed($(this), $(this).attr('bvEventType'), $(this).attr('data-page'));
     });
-// GOOD 
-    $( ".paginator-list ul li a" ).on('click', function paginationClick(e) {
-        featuredUsed($(this).attr('bvEventType'), 'next', $(this).attr('data-page'));
-    });
 
-    // $( ".js-rating-filter.rating-filter" ).on('click', function starHistogramClick(e) {
-    //     $(this).attr('bvEventType'), featuredUsed($(this), $(this).attr('data-value'));
-    // });
 });
-
-//we need to have a controlled vocabulary for the details values
-//that is used to construct the feature object.
-    //suggestions:
-    //1. filter
-    //2. sort
-    //3. paginate
 
 function featuredUsed(name, detail1, detail2){
   BV.pixel.trackEvent('Feature', {
