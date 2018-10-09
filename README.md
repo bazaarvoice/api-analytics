@@ -6,7 +6,7 @@ The Bazaarvoice API Analytics starter kit is a sample consisting of static HTML,
 Before Downloading:
 -------------
 1. Implementing the API Analytics Tags is required according to the [API terms and conditions](http://www.bazaarvoice.com/legal/conversations-api-terms-of-use.html)
-2. Read the [API Analytics tutorial](https://developer.bazaarvoice.com/apis/conversations/tutorials/Analytics) documentation.  Developers should also be familiar with the [API Terms of Use](http://www.bazaarvoice.com/legal/api-terms-of-use.html).
+2. Read the [API Analytics tutorial](https://developer.bazaarvoice.com/conversations-api/tutorials/bv-pixel) documentation.  Developers should also be familiar with the [API Terms of Use](http://www.bazaarvoice.com/legal/api-terms-of-use.html).
 3. Install the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd).
 4. The code in this GitHub repo is also [hosted on a web server](http://api-analytics-kit.bazaarvoice.com/). Both the [product description page](http://api-analytics-kit.bazaarvoice.com/) and the [conversion page](http://api-analytics-kit.bazaarvoice.com/conversion.html) can be considered working samples of the API Analytics starter kit. Users should interact with the pages with the [Bazaarvoice Analytics Inspector for Chrome](https://chrome.google.com/webstore/detail/bazaarvoice-analytics-ins/olmofcadoappjkcnnhomdlnpmpbleekd) enabled to help understand the implementation.
 5. Realize that the starter kit is meant as a sample. It is static, and by no means optimized for speed and scale. There are no calls made to the Conversations API to get product data. The key/value are hard coded in the js file. The code is provided as a means to help API users better understand API analytics.
@@ -54,14 +54,14 @@ The [bv-analytics.js](http://analytics-static.ugc.bazaarvoice.com/prod/static/la
 
 The javascript on the [sample product description page](http://api-analytics-kit.bazaarvoice.com/) listens for different events. The API Analytics code executes when they occur. The required analytics tags are required for each Bazaarvoice API instance.
 
-##### [Page View Product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)
+##### [Page View Product](https://developer.bazaarvoice.com/conversations-api/tutorials/bv-pixel/product-display-page-overview)
 
-Each time a product details page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete, the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
+Each time a product details page is rendered, the transaction analytics tag '[page view product](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#page-view-product)' is executed. In this sample, the '[page view product](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L51-L53)' is associated with the page load event.  When page load is complete, the analytics code is called and passes an object. The object's key/values pairs are [hard coded](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L2-L14) and are not obtained from a Conversations API call.
 
 ___
 
 
-##### [Feature Used in View](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
+##### [Feature Used in View](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#feature-used-in-view)
 
 Not all Product Details Pages have Consumer Generated Content (CGC) within the browser's viewable area when the page is rendered.  Often, users must scroll to view the CGC. As part of the API Analytics requirements, when the CGC comes in view, must also be captured. This is done by calling the transactional analytics tag '[feature used in view](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L46)'.  This object's key/value pairs differs slightly from the previous 'page view product' by:
 1. having additional keys that identify the CGC container Id
@@ -70,7 +70,7 @@ Not all Product Details Pages have Consumer Generated Content (CGC) within the b
 
 ___
 
-##### [Feature Used](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#feature-used-in-view)
+##### [Feature Used](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#feature-used-in-view)
 
 Event handlers are also attached to the various CGC inputs. This aims to capture how users interact with the Conversations data. In order to complete this.
 
@@ -93,11 +93,11 @@ ___
 
 The [conversion page](http://api-analytics-kit.bazaarvoice.com/conversion.html) simulates a page a user would reach upon completing a purchase. With conversion complete, the conversion analytic tags are executed. Both the '[ConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' and the '[PIIConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' are called in this sample. At a minimim one of the three conversion tags must be included in each Bazaarvoice API instance.
 
-##### [ConversionTransaction](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-transaction)
+##### [ConversionTransaction](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#conversion-transaction)
 
-##### [PIIConversionTransaction](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#conversion-transaction-with-pii)
+##### [PIIConversionTransaction](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#conversion-transaction-with-pii)
 
-##### [Non Transactional Conversion](https://developer.bazaarvoice.com/apis/conversations/tutorials/analytics#non-commercial-conversion-transaction)
+##### [Non Transactional Conversion](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#non-commercial-conversion-transaction)
 
 Hosted Sample:
 ---------------
