@@ -70,7 +70,7 @@ Not all Product Details Pages have Consumer Generated Content (CGC) within the b
 
 ___
 
-##### [Feature Used](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#feature-used-in-view)
+##### [Feature Used](https://developer.bazaarvoice.com/conversations-api/tutorials/bv-pixel/product-display-page-overview/featured-used-events)
 
 Event handlers are also attached to the various CGC inputs. This aims to capture how users interact with the Conversations data. In order to complete this.
 
@@ -93,11 +93,11 @@ ___
 
 The [conversion page](http://api-analytics-kit.bazaarvoice.com/conversion.html) simulates a page a user would reach upon completing a purchase. With conversion complete, the conversion analytic tags are executed. Both the '[ConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' and the '[PIIConversionTransaction](https://github.com/bazaarvoice/api-analytics/blob/master/js/conversion.js#L32-L33)' are called in this sample. At a minimim one of the three conversion tags must be included in each Bazaarvoice API instance.
 
-##### [ConversionTransaction](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#conversion-transaction)
+##### [ConversionTransaction](https://developer.bazaarvoice.com/conversations-api/tutorials/bv-pixel/transaction-conversion-overview/ecommerce-transactions)
 
-##### [PIIConversionTransaction](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#conversion-transaction-with-pii)
+##### [PIIConversionTransaction](https://developer.bazaarvoice.com/conversations-api/tutorials/bv-pixel/transaction-conversion-overview/non-commerce-conversions)
 
-##### [Non Transactional Conversion](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#non-commercial-conversion-transaction)
+##### [Non Transactional Conversion](https://developer.bazaarvoice.com/conversations-api/tutorials/bv-pixel/transaction-conversion-overview/non-commerce-conversions)
 
 Hosted Sample:
 ---------------
