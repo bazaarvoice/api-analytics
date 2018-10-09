@@ -61,7 +61,7 @@ Each time a product details page is rendered, the transaction analytics tag '[pa
 ___
 
 
-##### [Feature Used in View](https://developer.bazaarvoice.com/conversations-api/tutorials/analytics#feature-used-in-view)
+##### [Feature Used in View](https://developer.bazaarvoice.com/conversations-api/tutorials/bv-pixel/product-display-page-overview/featured-used-events)
 
 Not all Product Details Pages have Consumer Generated Content (CGC) within the browser's viewable area when the page is rendered.  Often, users must scroll to view the CGC. As part of the API Analytics requirements, when the CGC comes in view, must also be captured. This is done by calling the transactional analytics tag '[feature used in view](https://github.com/bazaarvoice/api-analytics/blob/master/js/main.js#L46)'.  This object's key/value pairs differs slightly from the previous 'page view product' by:
 1. having additional keys that identify the CGC container Id
